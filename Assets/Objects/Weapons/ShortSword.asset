@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b501537f1741f2439201e3872eae871, type: 3}
+  m_Name: ShortSword
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: b77f690d91243464f8a70db911520b7f, type: 3}
+  damage: 15
+  range: 1.5
+  delay: 1
+  weaponObject: {fileID: 2353295170639640778, guid: 14edf4041d5082347a3616a680e07243,
+    type: 3}
