@@ -19,6 +19,7 @@ public class Ads : MonoBehaviour
             if (Advertisement.IsReady())
             {
                 Debug.Log("ready");
+                Advertisement.Show();
             }
             else
             {
