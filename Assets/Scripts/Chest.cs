@@ -97,7 +97,7 @@ public class Chest : MonoBehaviour
 
             isOpen = true;
 
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>().ChangeHealth(15);
+            // GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>().ChangeHealth(15);
         }
     }
 }

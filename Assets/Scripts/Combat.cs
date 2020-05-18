@@ -41,6 +41,8 @@ public class Combat : MonoBehaviour
     {
         currentHealth += amount;
 
+        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
+
         healthBar.SetHealth(currentHealth);
     }
 
@@ -54,7 +56,7 @@ public class Combat : MonoBehaviour
         EnemyMovement enemy = GetComponent<EnemyMovement>();
         if (enemy != null)
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>().ChangeHealth(15);
+            // GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>().ChangeHealth(15);
 
             RoomLocker locker = GetComponentInParent<RoomLocker>();
 
@@ -67,7 +69,7 @@ public class Combat : MonoBehaviour
 
     public void ChangeMaxHealth(float amount)
     {
-        maxHealth = amount;
+        maxHealth += amount;
 
         ChangeHealth(amount);
 

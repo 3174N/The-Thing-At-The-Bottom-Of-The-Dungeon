@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
+    #region variables 
+    public float amount;
+
+    public bool speed, damage, health;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +27,7 @@ public class PowerUp : MonoBehaviour
         playerMovement player = other.GetComponent<playerMovement>();
         if (player != null)
         {
-            // Apply(player);
+            Apply(player);
 
             Destroy(gameObject);
         }
@@ -29,6 +35,11 @@ public class PowerUp : MonoBehaviour
 
     void Apply(playerMovement player)
     {
-
+        if (speed)
+            player.ChangeSpeed(amount);
+        else if (damage)
+            player.gameObject.GetComponent<PlayerCombat>().ChangeDamage(amount);
+        else if (health)
+            player.gameObject.GetComponent<Combat>().ChangeHealth(amount);
     }
 }

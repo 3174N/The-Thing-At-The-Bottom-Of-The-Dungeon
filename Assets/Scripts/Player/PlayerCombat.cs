@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    #region
     public Weapon currentWeapon;
     public StaminaBar staminaBar;
     public Transform attackPoint;
@@ -16,6 +17,8 @@ public class PlayerCombat : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     float waitTime;
+    float damageBonus;
+    #endregion
 
     void Start()
     {
@@ -68,5 +71,10 @@ public class PlayerCombat : MonoBehaviour
     private void OnDestroy()
     {
         deathMenu.SetActive(true);
+    }
+
+    public void ChangeDamage(float amount)
+    {
+        damageBonus += amount;
     }
 }
