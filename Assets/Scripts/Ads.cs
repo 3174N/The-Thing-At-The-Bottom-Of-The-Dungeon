@@ -16,10 +16,10 @@ public class Ads : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Advertisement.IsReady())
+            if (Advertisement.IsReady("rewardedVideo"))
             {
                 Debug.Log("ready");
-                Advertisement.Show();
+                Advertisement.Show("rewardedVideo");
             }
             else
             {

@@ -7,6 +7,8 @@ public class Shop : MonoBehaviour
     #region variables 
     public Material defaultM, highlight;
 
+    public GameObject openButton;
+
     SpriteRenderer sprite;
     #endregion
 
@@ -24,12 +26,22 @@ public class Shop : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        sprite.material = highlight;
+        if (collision.GetComponent<playerMovement>())
+        {
+            openButton.SetActive(true);
+
+            sprite.material = highlight;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        sprite.material = defaultM;
+        if (collision.GetComponent<playerMovement>())
+        {
+            openButton.SetActive(false);
+
+            sprite.material = defaultM;
+        }
     }
 
     public void Enter()
