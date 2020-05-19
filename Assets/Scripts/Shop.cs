@@ -8,6 +8,8 @@ public class Shop : MonoBehaviour
     public Material defaultM, highlight;
 
     public GameObject openButton;
+    
+    GameObject shopUI;
 
     SpriteRenderer sprite;
     #endregion
@@ -16,6 +18,8 @@ public class Shop : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+
+        shopUI = GameObject.FindGameObjectWithTag("Shop");
     }
 
     // Update is called once per frame
@@ -46,6 +50,6 @@ public class Shop : MonoBehaviour
 
     public void Enter()
     {
-
+        shopUI.SetActive(true);
     }
 }
