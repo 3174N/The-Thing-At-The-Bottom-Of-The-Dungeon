@@ -6,7 +6,7 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public float pS = 3.0f;
-    public VariableJoystick joystick;
+    public FixedJoystick joystick;
 
     Rigidbody2D rb;
     Vector2 m;

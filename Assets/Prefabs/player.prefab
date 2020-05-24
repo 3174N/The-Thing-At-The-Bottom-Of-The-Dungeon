@@ -497,6 +497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3670176408487911946}
+  joystick: {fileID: 0}
 --- !u!1 &7445610093538370898
 GameObject:
   m_ObjectHideFlags: 0

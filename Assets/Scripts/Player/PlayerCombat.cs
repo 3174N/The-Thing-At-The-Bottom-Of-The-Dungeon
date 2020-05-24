@@ -12,6 +12,8 @@ public class PlayerCombat : MonoBehaviour
 
     public GameObject deathMenu;
 
+    public FixedJoystick joystick;
+
     Animator animator;
 
     SpriteRenderer spriteRenderer;
@@ -35,7 +37,7 @@ public class PlayerCombat : MonoBehaviour
     {
         spriteRenderer.sprite = currentWeapon.sprite;
 
-        if (Input.GetMouseButtonDown(0) /*&& waitTime <= 0*/)
+        if (joystick.Vertical > 0.0001f || joystick.Horizontal > 0.0001f)
         {
             if (waitTime <= 0)
             {
