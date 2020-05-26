@@ -42,9 +42,8 @@ public class Minimap : MonoBehaviour
         minimap.SetActive(false);
 
         extendedMap.SetActive(true);
-        //extendedCam.SetActive(true);
-
-        // Time.timeScale = 0f;
+        
+        Time.timeScale = 0f;
     }
 
     /// <summary>
@@ -55,8 +54,7 @@ public class Minimap : MonoBehaviour
         minimap.SetActive(true);
 
         extendedMap.SetActive(false);
-        //extendedCam.SetActive(false);
-
-        // Time.timeScale = 1f;
+        
+        Time.timeScale = 1f;
     }
 }
