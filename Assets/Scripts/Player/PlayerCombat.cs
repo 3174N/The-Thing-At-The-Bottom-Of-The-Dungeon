@@ -38,7 +38,7 @@ public class PlayerCombat : MonoBehaviour
     {
         spriteRenderer.sprite = currentWeapon.sprite;
 
-        if (joystick.Vertical > 0.0001f || joystick.Horizontal > 0.0001f)
+        if (joystick.Vertical > 0f || joystick.Horizontal > 0f)
         {
             if (waitTime <= 0)
             {
