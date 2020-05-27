@@ -14,12 +14,13 @@ public class PlayerCombat : MonoBehaviour
 
     public FixedJoystick joystick;
 
-    Animator animator;
-
-    SpriteRenderer spriteRenderer;
-
     float waitTime;
-    float damageBonus;
+
+    public float damageBonus;
+    public float GetDamage { get { return damageBonus + currentWeapon.damage; } }
+
+    Animator animator;
+    SpriteRenderer spriteRenderer;
     #endregion
 
     void Start()
@@ -29,7 +30,7 @@ public class PlayerCombat : MonoBehaviour
 
         waitTime = currentWeapon.delay;
 
-        staminaBar.SetMaxStamina(currentWeapon.delay);
+        staminaBar.SetMaxStamina(currentWeapon.delay);        
     }
 
     // Update is called once per frame

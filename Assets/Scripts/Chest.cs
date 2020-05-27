@@ -82,7 +82,6 @@ public class Chest : MonoBehaviour
     /// </summary>
     public void Open()
     {
-        Debug.Log("hi");
         if (!isOpen)
         {
             sRenderer.sprite = opennedSprite;

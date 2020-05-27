@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class Combat : MonoBehaviour
 {
+    #region variables
     public float maxHealth;
     public HealthBar healthBar;
     
     public bool isDead;
 
     float currentHealth;
+    public float GetHealth { get { return currentHealth; } }       
+    #endregion
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-
-        isDead = false;
-
         healthBar.SetMaxHealth(maxHealth);
+
+        isDead = false;        
     }
 
     /// <summary>
@@ -43,7 +45,7 @@ public class Combat : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
 
-        healthBar.SetHealth(currentHealth);
+        healthBar.SetHealth(currentHealth);        
     }
 
     /// <summary>

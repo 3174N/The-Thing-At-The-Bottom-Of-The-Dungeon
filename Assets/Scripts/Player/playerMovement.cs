@@ -5,26 +5,28 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    public float pS = 3.0f;
+    #region variables
+    public float playerSpeed = 3.0f;
     public FixedJoystick joystick;
 
-    Rigidbody2D rb;
-    Vector2 m;
+    Rigidbody2D rigidBody2;
+    Vector2 movenent;    
+    #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidBody2 = GetComponent<Rigidbody2D>();        
     }
 
     // Update is called once per frame
     void Update()
     {
-        m.x = Input.GetAxisRaw("Horizontal");
-        m.y = Input.GetAxisRaw("Vertical");
+        movenent.x = Input.GetAxisRaw("Horizontal");
+        movenent.y = Input.GetAxisRaw("Vertical");
 
-        m.x = joystick.Horizontal;
-        m.y = joystick.Vertical;
+        movenent.x = joystick.Horizontal;
+        movenent.y = joystick.Vertical;
     }
 
     /// <summary>
@@ -32,12 +34,16 @@ public class playerMovement : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + m * pS * Time.fixedDeltaTime);
+        rigidBody2.MovePosition(rigidBody2.position + movenent * playerSpeed * Time.fixedDeltaTime);
     }
 
+    /// <summary>
+    /// Cahnges the speed of the player
+    /// </summary>
+    /// <param name="amount"></param>
     public void ChangeSpeed(float amount)
     {
-        pS += amount;
+        playerSpeed += amount;        
     }
 }
 
