@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: 18aca8a1abcf8c54a8556d0832265100, type: 2}
-  swapButton: {fileID: 0}
+  swapButton: {fileID: 5153366489997632550}
   highlight: {fileID: 2100000, guid: 17a944607bfa6b64a8fb5d2b27689727, type: 2}
   defult: {fileID: 2100000, guid: 8d8a759231a981c4b9bf60802c4e5abd, type: 2}
 --- !u!61 &5493997524914171768
