@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     #region variables 
     int coins;
+    public int GetCoins { get { return coins; } }
     #endregion
 
     // Start is called before the first frame update

@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 3670176408487911946}
   - component: {fileID: 3670176408487911947}
   - component: {fileID: 2338722694888919679}
+  - component: {fileID: 7880444841074367651}
   - component: {fileID: 3670176408487911944}
   - component: {fileID: 3670176408487911945}
   - component: {fileID: 1439865449}
@@ -172,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e5b8ab6ca987a41ae907f2db3ac8f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pS: 3
+  playerSpeed: 3
   joystick: {fileID: 0}
 --- !u!114 &2338722694888919679
 MonoBehaviour:
@@ -189,6 +190,18 @@ MonoBehaviour:
   maxHealth: 300
   healthBar: {fileID: 0}
   isDead: 0
+--- !u!114 &7880444841074367651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670176408487911950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eae1b91b1fe53444bc4cc98e818156c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &3670176408487911944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -707,6 +720,7 @@ MonoBehaviour:
     m_Bits: 512
   deathMenu: {fileID: 0}
   joystick: {fileID: 0}
+  damageBonus: 0
 --- !u!95 &127329252
 Animator:
   serializedVersion: 3

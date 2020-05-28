@@ -6,15 +6,15 @@ using UnityEngine.UI;
 public class StatsDisplay : MonoBehaviour
 {
     #region variables
-    public Text healthText, speedText, damageText;
+    public Text healthText, speedText, damageText, coinsText;
 
-    playerMovement player;
+    Player player;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMovement>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         UpdateStats();
     }
@@ -32,5 +32,8 @@ public class StatsDisplay : MonoBehaviour
         speedText.text = "SPEED: " + player.gameObject.GetComponent<playerMovement>().playerSpeed.ToString();
         
         damageText.text = "DAMAGE: " + player.gameObject.GetComponentInChildren<PlayerCombat>().GetDamage.ToString();
+
+        coinsText.text = player.GetCoins.ToString();
+        //Debug.Log(player.gameObject.GetComponent<Player>().GetCoins.ToString());
     }
 }

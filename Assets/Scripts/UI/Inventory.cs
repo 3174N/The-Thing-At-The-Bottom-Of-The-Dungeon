@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
     #region variables
     public GameObject inventory;
 
-    StatsDisplay sInventory;
+    public StatsDisplay sInventory;
     #endregion
 
     // Start is called before the first frame update
