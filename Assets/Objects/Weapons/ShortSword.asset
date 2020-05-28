@@ -18,3 +18,4 @@ MonoBehaviour:
   delay: 1
   weaponObject: {fileID: 2353295170639640778, guid: 14edf4041d5082347a3616a680e07243,
     type: 3}
+  price: 10

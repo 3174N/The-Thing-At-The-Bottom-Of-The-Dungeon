@@ -22,6 +22,9 @@ public class Inventory : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Opens inventory 
+    /// </summary>
     public void Open()
     {
         inventory.SetActive(true);
@@ -31,6 +34,9 @@ public class Inventory : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    /// <summary>
+    /// Closes inventory
+    /// </summary>
     public void Close()
     {
         inventory.SetActive(false);

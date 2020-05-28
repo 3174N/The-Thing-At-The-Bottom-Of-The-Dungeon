@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class StatsDisplay : MonoBehaviour
 {
     #region variables
-    public Text healthText, speedText, damageText, coinsText;
+    public Text healthText, speedText, damageText;
+    public Text[] coinsTexts;
 
     Player player;
     #endregion
@@ -33,7 +34,9 @@ public class StatsDisplay : MonoBehaviour
         
         damageText.text = "DAMAGE: " + player.gameObject.GetComponentInChildren<PlayerCombat>().GetDamage.ToString();
 
-        coinsText.text = player.GetCoins.ToString();
-        //Debug.Log(player.gameObject.GetComponent<Player>().GetCoins.ToString());
+        foreach (Text text in coinsTexts)
+        {
+            text.text = player.GetCoins.ToString();
+        }        
     }
 }

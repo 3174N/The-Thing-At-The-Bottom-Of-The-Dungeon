@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     #region variables 
-    public float amount;
+    public int amount;
     #endregion
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        playerMovement player = other.GetComponent<playerMovement>();
+        Player player = other.GetComponent<Player>();
         if (player != null)
         {
             Apply(player);
@@ -31,8 +31,12 @@ public class Coin : MonoBehaviour
         }
     }
 
-    public void Apply(playerMovement player)
+    /// <summary>
+    /// Changes the coins amount
+    /// </summary>
+    /// <param name="player"></param>
+    public void Apply(Player player)
     {
-        player.gameObject.GetComponent<Player>().ChangeCoins((int)amount);
+        player.ChangeCoins((int)amount);
     }
 }

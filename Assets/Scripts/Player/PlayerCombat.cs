@@ -61,9 +61,12 @@ public class PlayerCombat : MonoBehaviour
     /// <param name="weapon"></param>
     public void ChangeWeapon(Weapon weapon)
     {
-        Vector2 newPos = new Vector2(transform.position.x + Random.Range(0, 1),
-                transform.position.y + Random.Range(0, 1));
-        Instantiate(currentWeapon.weaponObject, newPos, Quaternion.identity);
+        if (currentWeapon.weaponObject != null)
+        {
+            Vector2 newPos = new Vector2(transform.position.x + Random.Range(0, 1),
+                    transform.position.y + Random.Range(0, 1));
+            Instantiate(currentWeapon.weaponObject, newPos, Quaternion.identity);
+        }
 
         currentWeapon = weapon;
 

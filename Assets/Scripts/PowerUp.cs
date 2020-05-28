@@ -38,7 +38,7 @@ public class PowerUp : MonoBehaviour
         if (speed)
             player.ChangeSpeed(amount);
         else if (damage)
-            player.gameObject.GetComponent<PlayerCombat>().ChangeDamage(amount);
+            player.gameObject.GetComponentInChildren<PlayerCombat>().ChangeDamage(amount);
         else if (health)
             player.gameObject.GetComponent<Combat>().ChangeHealth(amount);
     }

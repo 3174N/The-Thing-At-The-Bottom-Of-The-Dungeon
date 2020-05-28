@@ -8,8 +8,11 @@ public class Shop : MonoBehaviour
     public Material defaultM, highlight;
 
     public GameObject openButton;
+
+    public StatsDisplay inventory;
     
-    GameObject shopUI;
+    [SerializeField]
+    GameObject shop;
 
     SpriteRenderer sprite;
     #endregion
@@ -19,7 +22,7 @@ public class Shop : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
 
-        shopUI = GameObject.FindGameObjectWithTag("Shop");
+        //shop = GameObject.FindGameObjectWithTag("Shop");
     }
 
     // Update is called once per frame
@@ -48,8 +51,21 @@ public class Shop : MonoBehaviour
         }
     }
 
-    public void Enter()
+    /// <summary>
+    /// Opens the shop
+    /// </summary>
+    public void EnterShop()
     {
-        shopUI.SetActive(true);
+        shop.SetActive(true);
+
+        inventory.UpdateStats();
+    }
+
+    /// <summary>
+    /// Closes the shop
+    /// </summary>
+    public void ExitShop()
+    {
+        shop.SetActive(false);
     }
 }

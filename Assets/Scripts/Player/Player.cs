@@ -21,6 +21,10 @@ public class Player : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Changes the coins amount
+    /// </summary>
+    /// <param name="amount"></param>
     public void ChangeCoins(int amount)
     {
         coins += amount;

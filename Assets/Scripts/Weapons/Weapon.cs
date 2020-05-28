@@ -16,6 +16,8 @@ public class Weapon : ScriptableObject
 
     public GameObject weaponObject;
 
+    public int price;
+
     /// <summary>
     /// Attacking method
     /// </summary>
