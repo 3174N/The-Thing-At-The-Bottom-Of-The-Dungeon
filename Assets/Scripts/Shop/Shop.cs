@@ -15,6 +15,8 @@ public class Shop : MonoBehaviour
     GameObject shop;
 
     SpriteRenderer sprite;
+
+    RoomLocker room;
     #endregion
 
     // Start is called before the first frame update
@@ -22,7 +24,7 @@ public class Shop : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
 
-        //shop = GameObject.FindGameObjectWithTag("Shop");
+        room = GetComponentInParent<RoomLocker>();
     }
 
     // Update is called once per frame
@@ -34,10 +36,10 @@ public class Shop : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<playerMovement>())
-        {
+        {            
             openButton.SetActive(true);
 
-            sprite.material = highlight;
+            sprite.material = highlight;            
         }
     }
 

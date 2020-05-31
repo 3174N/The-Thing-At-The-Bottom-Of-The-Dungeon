@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,7 @@ public class ShopItem : MonoBehaviour
     public int GetPrice { get { return price; } }
 
     Weapon weapon;
+    GameObject[] takenWeapons;
 
     Image image;
     #endregion
@@ -24,7 +26,7 @@ public class ShopItem : MonoBehaviour
         image = GetComponent<Image>();
 
         weapon = weapons[(int)Random.Range(0f, weapons.Length)];
-
+          
         price = (int)Random.Range(weapon.price - 10f, weapon.price + 10f);
         priceText.text = price.ToString();
 

@@ -9,6 +9,7 @@ TagManager:
   - MainCam
   - Shop
   - Inventory
+  - ShopItem
   layers:
   - Default
   - TransparentFX

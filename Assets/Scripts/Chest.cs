@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
+    #region variables
     public GameObject[] objects;
 
     public GameObject openButton;
@@ -15,6 +16,7 @@ public class Chest : MonoBehaviour
 
     SpriteRenderer sRenderer;
     RoomLocker room;
+    #endregion
 
     /// <summary>
     /// Called at the first frame
