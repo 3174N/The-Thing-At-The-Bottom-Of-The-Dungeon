@@ -5,9 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Weapon", menuName = "Weapon")]
 public class Weapon : ScriptableObject
 {
-    /// <summary>
-    /// Create The Weapon Object
-    /// </summary>
+    #region variables
     public Sprite sprite;
 
     public int damage;
@@ -17,18 +15,17 @@ public class Weapon : ScriptableObject
     public GameObject weaponObject;
 
     public int price;
+    #endregion
 
     /// <summary>
-    /// Attacking method
+    /// Attacks enemies
     /// </summary>
     /// <param name="attackPoint"></param>
     /// <param name="enemyLayers"></param>
     public void Attack(Transform attackPoint, LayerMask enemyLayers)
     {
         Vector2 center = new Vector2(1.5f, range);
-
-        //Animation
-
+                
         //Detect enemies
         Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, center, 0, enemyLayers);
 

@@ -33,7 +33,7 @@ public class PowerUp : MonoBehaviour
         }
     }
 
-    void Apply(playerMovement player)
+    public void Apply(playerMovement player)
     {
         if (speed)
             player.ChangeSpeed(amount);
