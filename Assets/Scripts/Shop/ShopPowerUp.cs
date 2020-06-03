@@ -31,6 +31,7 @@ public class ShopPowerUp : MonoBehaviour
         priceText.text = price.ToString();
 
         image.sprite = powerUp.gameObject.GetComponent<SpriteRenderer>().sprite;
+        image.color = powerUp.gameObject.GetComponent<SpriteRenderer>().color;
     }
 
     public void Buy()
@@ -41,7 +42,7 @@ public class ShopPowerUp : MonoBehaviour
         {
             player.ChangeCoins(-price);
             powerUp.Apply(player.gameObject.GetComponent<playerMovement>());
-
+            
             inventory.UpdateStats();
 
             Destroy(gameObject);

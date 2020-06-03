@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Shop : MonoBehaviour
 
     public GameObject openButton;
 
-    public StatsDisplay inventory;
+    public Text coinText;
     
     [SerializeField]
     GameObject shop;
@@ -60,7 +61,7 @@ public class Shop : MonoBehaviour
     {
         shop.SetActive(true);
 
-        inventory.UpdateStats();
+        StatsDisplay.UpdateCoin(coinText);
     }
 
     /// <summary>

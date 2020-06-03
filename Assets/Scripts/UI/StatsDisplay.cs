@@ -7,7 +7,7 @@ public class StatsDisplay : MonoBehaviour
 {
     #region variables
     public Text healthText, speedText, damageText;
-    public Text[] coinsTexts;
+    public Text coinsText;
 
     Player player;
     #endregion
@@ -34,9 +34,13 @@ public class StatsDisplay : MonoBehaviour
         
         damageText.text = "DAMAGE: " + player.gameObject.GetComponentInChildren<PlayerCombat>().GetDamage.ToString();
 
-        foreach (Text text in coinsTexts)
-        {
-            text.text = player.GetCoins.ToString();
-        }        
+        UpdateCoin(coinsText);
+    }
+
+    public static void UpdateCoin(Text coinText)
+    {
+        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+        coinText.text = player.GetCoins.ToString();
     }
 }
