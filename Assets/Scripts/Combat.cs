@@ -9,6 +9,7 @@ public class Combat : MonoBehaviour
     public HealthBar healthBar;
     
     public bool isDead;
+    public GameObject[] DropOnDeath;
 
     float currentHealth;
     public float GetHealth { get { return currentHealth; } }       
@@ -64,6 +65,10 @@ public class Combat : MonoBehaviour
 
             locker.enemies.Remove(enemy.gameObject);
             locker.CheckLock();
+
+            Instantiate(DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)], 
+                        new Vector2(transform.position.y + Random.Range(0, 1), transform.position.x + Random.Range(0, 1)), 
+                        Quaternion.identity);
         }
 
         Destroy(gameObject);
