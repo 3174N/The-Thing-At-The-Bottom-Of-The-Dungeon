@@ -12,7 +12,10 @@ public class Combat : MonoBehaviour
     public GameObject[] DropOnDeath;
 
     float currentHealth;
-    public float GetHealth { get { return currentHealth; } }       
+    public float GetHealth { get { return currentHealth; } }
+
+    Player player;
+    bool isPLayer;
     #endregion
 
     // Start is called before the first frame update
@@ -21,7 +24,7 @@ public class Combat : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
-        isDead = false;        
+        isDead = false
     }
 
     /// <summary>
@@ -33,7 +36,7 @@ public class Combat : MonoBehaviour
         if (isDead || currentHealth <= 0)
         {
             Die();
-        }
+        
     }
 
     /// <summary>

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
@@ -19,6 +20,9 @@ public class PlayerCombat : MonoBehaviour
     public float damageBonus;
     public float GetDamage { get { return damageBonus + currentWeapon.damage; } }
 
+    playerMovement player;
+    float playerSpeed;
+
     Animator animator;
     SpriteRenderer spriteRenderer;
     #endregion
@@ -28,6 +32,9 @@ public class PlayerCombat : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
+        player = GetComponentInParent<playerMovement>();
+        playerSpeed = player.playerSpeed;
+
         waitTime = currentWeapon.delay;
 
         staminaBar.SetMaxStamina(currentWeapon.delay);        
@@ -36,6 +43,12 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerSpeed < 15)
+        {
+            float test = Mathf.Pow((float)0.05 * playerSpeed, 2);
+            waitTime = currentWeapon.delay - Mathf.Pow(0.1f * playerSpeed, 2f) + (2 * playerSpeed) - 1;
+        }
+
         spriteRenderer.sprite = currentWeapon.sprite;
 
         if (joystick.Vertical != 0f || joystick.Horizontal != 0f)
