@@ -10,6 +10,7 @@ public class Shop : MonoBehaviour
 
     public GameObject openButton;
 
+    public StatsDisplay inventory;
     public Text coinText;
     
     [SerializeField]
@@ -61,7 +62,7 @@ public class Shop : MonoBehaviour
     {
         shop.SetActive(true);
 
-        StatsDisplay.UpdateCoin(coinText);
+        coinText.text = inventory.coinsText.text;
     }
 
     /// <summary>

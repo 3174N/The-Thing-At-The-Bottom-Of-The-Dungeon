@@ -9,7 +9,7 @@ public class StatsDisplay : MonoBehaviour
     public Text healthText, speedText, damageText;
     public Text coinsText;
 
-    Player player;
+    public Player player;
     #endregion
 
     // Start is called before the first frame update
@@ -34,13 +34,13 @@ public class StatsDisplay : MonoBehaviour
         
         damageText.text = "DAMAGE: " + player.gameObject.GetComponentInChildren<PlayerCombat>().GetDamage.ToString();
 
-        UpdateCoin(coinsText);
+        coinsText.text = player.GetCoins.ToString();
     }
 
-    public static void UpdateCoin(Text coinText)
+    /*public static void UpdateCoin(Text coinText)
     {
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        // Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         coinText.text = player.GetCoins.ToString();
-    }
+    }*/
 }
