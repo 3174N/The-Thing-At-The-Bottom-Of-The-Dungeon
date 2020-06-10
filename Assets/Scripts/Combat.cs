@@ -66,9 +66,9 @@ public class Combat : MonoBehaviour
             locker.enemies.Remove(enemy.gameObject);
             locker.CheckLock();
 
-            Instantiate(DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)], 
-                        new Vector2(transform.position.y + Random.Range(0, 1), transform.position.x + Random.Range(0, 1)), 
-                        Quaternion.identity);
+            GameObject randomDrop = DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)];
+            Instantiate(randomDrop, transform.position, Quaternion.identity);
+            Debug.Log("droped" + randomDrop + transform.position);
         }
 
         Destroy(gameObject);
