@@ -33,22 +33,14 @@ public class PlayerCombat : MonoBehaviour
         animator = GetComponent<Animator>();
 
         player = GetComponentInParent<playerMovement>();
-        playerSpeed = player.playerSpeed;
 
         waitTime = currentWeapon.delay;
-
         staminaBar.SetMaxStamina(currentWeapon.delay);        
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if (playerSpeed < 15)
-        {
-            float test = Mathf.Pow((float)0.05 * playerSpeed, 2);
-            waitTime = currentWeapon.delay - Mathf.Pow(0.1f * playerSpeed, 2f) + (2 * playerSpeed) - 1;
-        }
-
+    { 
         spriteRenderer.sprite = currentWeapon.sprite;
 
         if (joystick.Vertical != 0f || joystick.Horizontal != 0f)
@@ -60,6 +52,22 @@ public class PlayerCombat : MonoBehaviour
                 currentWeapon.Attack(attackPoint, enemyLayers);
 
                 waitTime = currentWeapon.delay;
+                if (player.playerSpeed < 15)
+                { 
+                    waitTime = currentWeapon.delay - (Mathf.Pow(-0.05f * player.playerSpeed, 2f) + (player.playerSpeed)) / 10;
+                    Debug.Log(currentWeapon.delay - (Mathf.Pow(-0.05f * player.playerSpeed, 2f) + (player.playerSpeed)) / 10);
+                    if (waitTime <= 0)
+                    {
+                        waitTime = 0.1f;
+                    }
+                    staminaBar.SetMaxStamina(waitTime);
+                }
+                else
+                {
+                    waitTime = currentWeapon.delay - (-(Mathf.Pow(0.05f * 15, 2f)) + (2 * 15));
+                    staminaBar.SetMaxStamina(waitTime);
+                }
+                Debug.Log(waitTime);
                 staminaBar.SetStamina(waitTime);
             }
         }
@@ -76,8 +84,8 @@ public class PlayerCombat : MonoBehaviour
     {
         if (currentWeapon.weaponObject != null)
         {
-            Vector2 newPos = new Vector2(transform.position.x + Random.Range(0, 1),
-                    transform.position.y + Random.Range(0, 1));
+            Vector2 newPos = new Vector2(transform.position.x + UnityEngine.Random.Range(0, 1),
+                    transform.position.y + UnityEngine.Random.Range(0, 1));
             Instantiate(currentWeapon.weaponObject, newPos, Quaternion.identity);
         }
 

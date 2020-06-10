@@ -7,7 +7,7 @@ public class Combat : MonoBehaviour
     #region variables
     public float maxHealth;
     public HealthBar healthBar;
-    
+
     public bool isDead;
     public GameObject[] DropOnDeath;
 
@@ -24,7 +24,7 @@ public class Combat : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
-        isDead = false
+        isDead = false;
     }
 
     /// <summary>
@@ -36,45 +36,42 @@ public class Combat : MonoBehaviour
         if (isDead || currentHealth <= 0)
         {
             Die();
-        
+
+        }
+
+        /// <summary>
+        /// Destroys the object if health is smaller or equel to 0
+        /// </summary>
+        void Die()
+        {
+            isDead = true;
+
+            EnemyMovement enemy = GetComponent<EnemyMovement>();
+            if (enemy != null)
+            {
+                // GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>().ChangeHealth(15);
+
+                RoomLocker locker = GetComponentInParent<RoomLocker>();
+
+                locker.enemies.Remove(enemy.gameObject);
+                locker.CheckLock();
+
+                GameObject randomDrop = DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)];
+                Instantiate(randomDrop, transform.position, Quaternion.identity);
+                Debug.Log("droped" + randomDrop + transform.position);
+            }
+
+            Destroy(gameObject);
+        }
     }
 
-    /// <summary>
-    /// Change the object's health
-    /// </summary>
-    /// <param name="amount"></param>
     public void ChangeHealth(float amount)
     {
         currentHealth += amount;
 
         currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
 
-        healthBar.SetHealth(currentHealth);        
-    }
-
-    /// <summary>
-    /// Destroys the object if health is smaller or equel to 0
-    /// </summary>
-    void Die()
-    {
-        isDead = true;
-
-        EnemyMovement enemy = GetComponent<EnemyMovement>();
-        if (enemy != null)
-        {
-            // GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>().ChangeHealth(15);
-
-            RoomLocker locker = GetComponentInParent<RoomLocker>();
-
-            locker.enemies.Remove(enemy.gameObject);
-            locker.CheckLock();
-
-            GameObject randomDrop = DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)];
-            Instantiate(randomDrop, transform.position, Quaternion.identity);
-            Debug.Log("droped" + randomDrop + transform.position);
-        }
-
-        Destroy(gameObject);
+        healthBar.SetHealth(currentHealth);
     }
 
     public void ChangeMaxHealth(float amount)
