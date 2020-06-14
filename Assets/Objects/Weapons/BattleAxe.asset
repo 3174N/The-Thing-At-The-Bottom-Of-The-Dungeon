@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 91a6e7fe8a29fd94bacb125f3cd45f67, type: 3}
   damage: 20
-  range: 1.5
+  range: 2.5
   delay: 2.5
   weaponObject: {fileID: 5493997524914171716, guid: ed711b921baf2ae4bb660327f3da4ff6,
     type: 3}

@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Fist
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  damage: 5
+  damage: 3
   range: 1
-  delay: 0.3
-  weaponObject: {fileID: 6913710623073392898, guid: 735b168dff5cf544abf59572dc41bdc7,
-    type: 3}
+  delay: 1
+  weaponObject: {fileID: 0}
   price: 10

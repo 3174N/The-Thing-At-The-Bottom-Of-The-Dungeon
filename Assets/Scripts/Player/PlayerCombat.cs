@@ -104,4 +104,9 @@ public class PlayerCombat : MonoBehaviour
     {
         damageBonus += amount;
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(attackPoint.position, new Vector3(1, currentWeapon.range, 0));
+    }
 }
