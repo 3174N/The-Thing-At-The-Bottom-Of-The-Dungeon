@@ -2,12 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
     #region variables
     public float playerSpeed = 3.0f;
     public FixedJoystick joystick;
+
+    public Text speedText;
 
     Rigidbody2D rigidBody2;
     Vector2 movenent;    
@@ -16,7 +19,9 @@ public class playerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidBody2 = GetComponent<Rigidbody2D>();        
+        rigidBody2 = GetComponent<Rigidbody2D>();
+
+        speedText.text = playerSpeed.ToString();
     }
 
     // Update is called once per frame
@@ -43,7 +48,9 @@ public class playerMovement : MonoBehaviour
     /// <param name="amount"></param>
     public void ChangeSpeed(float amount)
     {
-        playerSpeed += amount;        
+        playerSpeed += amount;
+
+        speedText.text = playerSpeed.ToString();
     }
 }
 

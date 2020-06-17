@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerCombat : MonoBehaviour
     public float damageBonus;
     public float GetDamage { get { return damageBonus + currentWeapon.damage; } }
 
+    public Text damageText;
+
     playerMovement player;
     float playerSpeed;
 
@@ -35,7 +38,9 @@ public class PlayerCombat : MonoBehaviour
         player = GetComponentInParent<playerMovement>();
 
         waitTime = currentWeapon.delay;
-        staminaBar.SetMaxStamina(currentWeapon.delay);        
+        staminaBar.SetMaxStamina(currentWeapon.delay);
+
+        damageText.text = "DAMAGE: " + (damageBonus + currentWeapon.damage).ToString();
     }
 
     // Update is called once per frame
@@ -93,6 +98,8 @@ public class PlayerCombat : MonoBehaviour
 
         waitTime = currentWeapon.delay;
         staminaBar.SetMaxStamina(currentWeapon.delay);
+
+        damageText.text = "DAMAGE: " + (damageBonus + currentWeapon.damage).ToString();
     }
 
     private void OnDestroy()
@@ -103,6 +110,8 @@ public class PlayerCombat : MonoBehaviour
     public void ChangeDamage(float amount)
     {
         damageBonus += amount;
+
+        damageText.text = "DAMAGE: " + (damageBonus + currentWeapon.damage).ToString();
     }
 
     private void OnDrawGizmos()

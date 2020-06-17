@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Combat : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Combat : MonoBehaviour
     float currentHealth;
     public float GetHealth { get { return currentHealth; } }
 
+    public Text healthText;
+
     Player player;
     bool isPLayer;
     #endregion
@@ -25,6 +28,14 @@ public class Combat : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         isDead = false;
+
+        player = GetComponent<Player>();
+        if (player != null)
+        {
+            isPLayer = true;
+
+            healthText.text = "HEALTH: " + currentHealth.ToString() + "/" + maxHealth.ToString();
+        }
     }
 
     /// <summary>
@@ -72,6 +83,11 @@ public class Combat : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
 
         healthBar.SetHealth(currentHealth);
+
+        if (isPLayer)
+        {
+            healthText.text = "HEALTH: " + currentHealth.ToString() + "/" + maxHealth.ToString();
+        }
     }
 
     public void ChangeMaxHealth(float amount)
@@ -82,5 +98,10 @@ public class Combat : MonoBehaviour
 
         healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealth(currentHealth);
+
+        if (isPLayer)
+        {
+            healthText.text = "HEALTH: " + currentHealth.ToString() + "/" + maxHealth.ToString();
+        }
     }
 }

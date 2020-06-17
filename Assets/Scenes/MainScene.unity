@@ -2390,18 +2390,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 1513615669}
   sInventory: {fileID: 0}
---- !u!114 &680696280 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7880444841074367651, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
-    type: 3}
-  m_PrefabInstance: {fileID: 3670176409374001245}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eae1b91b1fe53444bc4cc98e818156c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &763642647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2409,6 +2397,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1292705369, guid: 66273541bedce5f489b3261509d8dbcb, type: 3}
+      propertyPath: m_Name
+      value: CoinsText
+      objectReference: {fileID: 0}
     - target: {fileID: 503367458755410504, guid: 66273541bedce5f489b3261509d8dbcb,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2418,12 +2410,12 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1513615673}
+      objectReference: {fileID: 0}
     - target: {fileID: 3827801508450673841, guid: 66273541bedce5f489b3261509d8dbcb,
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1513615673}
+      objectReference: {fileID: 0}
     - target: {fileID: 6778867231848547094, guid: 66273541bedce5f489b3261509d8dbcb,
         type: 3}
       propertyPath: m_Name
@@ -2433,7 +2425,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1513615673}
+      objectReference: {fileID: 0}
     - target: {fileID: 6778867231848547178, guid: 66273541bedce5f489b3261509d8dbcb,
         type: 3}
       propertyPath: coinText
@@ -2508,7 +2500,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1513615673}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66273541bedce5f489b3261509d8dbcb, type: 3}
 --- !u!1 &771063996
@@ -4585,7 +4577,6 @@ GameObject:
   - component: {fileID: 1513615670}
   - component: {fileID: 1513615672}
   - component: {fileID: 1513615671}
-  - component: {fileID: 1513615673}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Inventory
@@ -4654,23 +4645,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513615669}
   m_CullTransparentMesh: 0
---- !u!114 &1513615673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513615669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b31cc8115956e8408a27f556242531d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthText: {fileID: 225687155}
-  speedText: {fileID: 464723683}
-  damageText: {fileID: 562154680}
-  coinsText: {fileID: 1564371485}
-  player: {fileID: 680696280}
 --- !u!114 &1525297691 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1525297691, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
@@ -4882,7 +4856,7 @@ GameObject:
   - component: {fileID: 1564371486}
   - component: {fileID: 1564371485}
   m_Layer: 5
-  m_Name: Coins
+  m_Name: CoinsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6929,14 +6903,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 593972108}
     - target: {fileID: 61014451, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7, type: 3}
-      propertyPath: inventory
+      propertyPath: damageText
       value: 
-      objectReference: {fileID: 1513615673}
-    - target: {fileID: 61014451, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7, type: 3}
-      propertyPath: currentWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: cd4623d1d8a5fd547bf16559510eabd0,
-        type: 2}
+      objectReference: {fileID: 562154680}
     - target: {fileID: 2338722694888919679, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
         type: 3}
       propertyPath: healthBar
@@ -6944,9 +6913,9 @@ PrefabInstance:
       objectReference: {fileID: 1496850369}
     - target: {fileID: 2338722694888919679, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
         type: 3}
-      propertyPath: inventory
+      propertyPath: healthText
       value: 
-      objectReference: {fileID: 1513615673}
+      objectReference: {fileID: 225687155}
     - target: {fileID: 3670176408487911946, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7009,9 +6978,9 @@ PrefabInstance:
       objectReference: {fileID: 1437566251}
     - target: {fileID: 3670176408487911947, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
         type: 3}
-      propertyPath: inventory
+      propertyPath: speedText
       value: 
-      objectReference: {fileID: 1513615673}
+      objectReference: {fileID: 464723683}
     - target: {fileID: 3670176408487911950, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
         type: 3}
       propertyPath: m_Name
@@ -7022,6 +6991,16 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 593972108}
+    - target: {fileID: 7880444841074367651, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
+        type: 3}
+      propertyPath: coinTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 2091484739}
+    - target: {fileID: 7880444841074367651, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
+        type: 3}
+      propertyPath: coinTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1564371485}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7, type: 3}
 --- !u!1001 &4171001802206988150

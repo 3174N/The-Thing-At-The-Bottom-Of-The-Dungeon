@@ -6,8 +6,6 @@ public class Inventory : MonoBehaviour
 {
     #region variables
     public GameObject inventory;
-
-    public StatsDisplay sInventory;
     #endregion
 
     // Start is called before the first frame update
@@ -28,8 +26,6 @@ public class Inventory : MonoBehaviour
     public void Open()
     {
         inventory.SetActive(true);
-
-        sInventory.UpdateStats();
 
         Time.timeScale = 0f;
     }
