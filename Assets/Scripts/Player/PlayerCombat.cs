@@ -59,8 +59,7 @@ public class PlayerCombat : MonoBehaviour
                 waitTime = currentWeapon.delay;
                 if (player.playerSpeed < 15)
                 { 
-                    waitTime = currentWeapon.delay - (Mathf.Pow(-0.05f * player.playerSpeed, 2f) + (player.playerSpeed)) / 10;
-                    Debug.Log(currentWeapon.delay - (Mathf.Pow(-0.05f * player.playerSpeed, 2f) + (player.playerSpeed)) / 10);
+                    waitTime = currentWeapon.delay - ((Mathf.Pow(-0.05f * player.playerSpeed, 2f) + (player.playerSpeed) / 10) / 2);
                     if (waitTime <= 0)
                     {
                         waitTime = 0.1f;
@@ -69,7 +68,7 @@ public class PlayerCombat : MonoBehaviour
                 }
                 else
                 {
-                    waitTime = currentWeapon.delay - (-(Mathf.Pow(0.05f * 15, 2f)) + (2 * 15));
+                    waitTime = currentWeapon.delay - ((Mathf.Pow(-0.05f * 15, 2f) + (15) / 10) / 2);
                     staminaBar.SetMaxStamina(waitTime);
                 }
                 Debug.Log(waitTime);
