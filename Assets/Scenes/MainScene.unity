@@ -2411,13 +2411,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3827801508379274148, guid: 66273541bedce5f489b3261509d8dbcb,
         type: 3}
+      propertyPath: weapons.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827801508379274148, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: powerUps.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827801508379274148, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
       propertyPath: inventory
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827801508379274148, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: powerUps.Array.data[0]
+      value: 
+      objectReference: {fileID: 5167856433328509711, guid: f19aa925fd06ffe4794e38ec934cb201,
+        type: 3}
+    - target: {fileID: 3827801508379274148, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: powerUps.Array.data[1]
+      value: 
+      objectReference: {fileID: 2185356882976858144, guid: 79cae6d0a9e5d424e87ade73c61b8331,
+        type: 3}
+    - target: {fileID: 3827801508379274148, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: powerUps.Array.data[2]
+      value: 
+      objectReference: {fileID: 8620135705851975410, guid: 04ab8fa9cfc5ea64f87c2a419c2ea382,
+        type: 3}
+    - target: {fileID: 3827801508379274148, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: sellWeapon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827801508379274148, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: sellPowerUp
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3827801508450673841, guid: 66273541bedce5f489b3261509d8dbcb,
         type: 3}
       propertyPath: inventory
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827801508450673841, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: sellWeapon
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6778867231848547094, guid: 66273541bedce5f489b3261509d8dbcb,
         type: 3}
@@ -2503,6 +2546,11 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800164922708747586, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: sellWeapon
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66273541bedce5f489b3261509d8dbcb, type: 3}
