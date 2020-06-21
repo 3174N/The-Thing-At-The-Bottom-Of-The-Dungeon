@@ -42,4 +42,24 @@ public class PowerUp : MonoBehaviour
         else if (health)
             player.gameObject.GetComponent<Combat>().ChangeHealth(amount);
     }
+
+    public void Randomize()
+    {
+        int rand = Random.Range(1, 3);
+        if (rand == 1)
+        {
+            damage = true;
+            amount = 7;
+        }
+        else if (rand == 2)
+        {
+            speed = true;
+            amount = 3;
+        }
+        else
+        {
+            health = true;
+            amount = 20;
+        }
+    }
 }
