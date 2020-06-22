@@ -48,6 +48,7 @@ public class Combat : MonoBehaviour
         {
             Die();
 
+            isDead = true;
         }
 
         /// <summary>
