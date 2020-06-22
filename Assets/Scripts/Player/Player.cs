@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     #region variables 
+    public bool hasKey = false;
+
     int coins;
     public int GetCoins { get { return coins; } }
 
