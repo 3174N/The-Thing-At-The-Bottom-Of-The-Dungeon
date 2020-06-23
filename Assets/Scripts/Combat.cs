@@ -59,14 +59,17 @@ public class Combat : MonoBehaviour
             isDead = true;
 
             EnemyMovement enemy = GetComponent<EnemyMovement>();
-            if (enemy != null)
+            if (enemy != null || GetComponent<Boss>() != null)
             {
                 // GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>().ChangeHealth(15);
 
-                RoomLocker locker = GetComponentInParent<RoomLocker>();
+                if (enemy != null)
+                {
+                    RoomLocker locker = GetComponentInParent<RoomLocker>();
 
-                locker.enemies.Remove(enemy.gameObject);
-                locker.CheckLock();
+                    locker.enemies.Remove(enemy.gameObject);
+                    locker.CheckLock();
+                }
 
                 GameObject randomDrop = DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)];
                 Instantiate(randomDrop, transform.position, Quaternion.identity);

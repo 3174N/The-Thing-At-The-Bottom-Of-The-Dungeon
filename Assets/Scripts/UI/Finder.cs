@@ -19,4 +19,21 @@ public class Finder : MonoBehaviour
     {
         return GameObject.FindGameObjectWithTag("Shop");
     }
+
+    public static GameObject FindClosestTag(Transform transform ,string tag, float closeDistance)
+    {
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
+
+        for (int i = 0; i < taggedObjects.Length; i++)
+        {
+            if (Vector3.Distance(transform.position,
+                     taggedObjects[i].transform.position) <= closeDistance)
+            {
+                Debug.Log(taggedObjects[i]);
+                return taggedObjects[i];
+            }
+        }
+
+        return null;
+    }
 }

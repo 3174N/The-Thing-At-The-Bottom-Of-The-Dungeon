@@ -71,7 +71,6 @@ public class PlayerCombat : MonoBehaviour
                     waitTime = currentWeapon.delay - ((Mathf.Pow(-0.05f * 15, 2f) + (15) / 10) / 2);
                     staminaBar.SetMaxStamina(waitTime);
                 }
-                Debug.Log(waitTime);
                 staminaBar.SetStamina(waitTime);
             }
         }
