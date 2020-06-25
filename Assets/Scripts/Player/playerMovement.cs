@@ -11,6 +11,9 @@ public class playerMovement : MonoBehaviour
     public FixedJoystick joystick;
 
     public Text speedText;
+    public Transform point;
+
+    public float timeToMove;
 
     Rigidbody2D rigidBody2;
     Vector2 movenent;    

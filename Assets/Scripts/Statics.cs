@@ -29,11 +29,19 @@ public class Finder : MonoBehaviour
             if (Vector3.Distance(transform.position,
                      taggedObjects[i].transform.position) <= closeDistance)
             {
-                Debug.Log(taggedObjects[i]);
                 return taggedObjects[i];
             }
         }
 
         return null;
+    }
+}
+
+public class Mover : MonoBehaviour
+{
+    public static void MoveToPoint(Transform transform, Vector2 point, float speed)
+    {
+        float step = speed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, point, step);
     }
 }
