@@ -58,6 +58,8 @@ MonoBehaviour:
   closeDistance: 7
   attackObject: {fileID: 3719489445437646059, guid: f9a4713d5cec8e94397ef246284ce36a,
     type: 3}
+  attackObject2: {fileID: 3719489445437646059, guid: e5fd49eccc2acd44b897a5df42c3b275,
+    type: 3}
 --- !u!212 &7973459280031409879
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class AttackObject : MonoBehaviour
         if (player != null)
         {
             player.GetComponent<Combat>().ChangeHealth(-damage);
+            Destroy(gameObject);
         }
-        Debug.Log(collision);
     }
 }

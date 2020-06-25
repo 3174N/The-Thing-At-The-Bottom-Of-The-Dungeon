@@ -23,6 +23,7 @@ public class Boss : MonoBehaviour
     public float closeDistance = 7;
 
     public GameObject attackObject;
+    public GameObject attackObject2;
     Vector2 startPos;
     Vector2 newStartPos;
     Vector2 movement;
@@ -57,38 +58,25 @@ public class Boss : MonoBehaviour
         {
             isAttacking = true;
 
-            //int rand = Random.Range(1, 3);
-            int rand = 2;
+            int rand = UnityEngine.Random.Range(1, 3);
             switch (rand)
             {
                 case 1:
-                    for (int i = 0; i < 3; i++)
-                    {
-                        Vector2 playerPos = player.transform.position;
-                        while (playerPos != (Vector2)transform.position)
-                        {
-                            Mover.MoveToPoint(transform, playerPos, speed);
-                        }
-                        time = 1.5f;
-                        while (time >= 0)
-                        {
-                            time -= Time.deltaTime;
-                            Debug.Log(time);
-                        }
-                        while ((Vector2)transform.position != startPos)
-                        {
-                            Mover.MoveToPoint(transform, startPos, speed);
-                        }
-                        Debug.Log(i);
-                    }
+                    GameObject attackClone = Instantiate(attackObject, transform.position, Quaternion.identity);
+                    Destroy(attackClone, 5f);
+
+                    waitTime = maxWaitTime;
                     break;
                 case 2:
-                    Instantiate(attackObject, transform.position, Quaternion.identity);
+                    for (int i = 0; i < 3; i++)
+                    {
+                        attackClone = Instantiate(attackObject2, transform.position, Quaternion.identity);
+                        Destroy(attackClone, 5f);
+                    }
                     waitTime = maxWaitTime;
-                    //Destroy(attackObject.gameObject, 10f);
                     break;
                 case 3:
-                    // Attack 3
+                    waitTime = maxWaitTime;
                     break;
                 default:
                     break;
