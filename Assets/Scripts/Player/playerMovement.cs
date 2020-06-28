@@ -24,7 +24,7 @@ public class playerMovement : MonoBehaviour
     {
         rigidBody2 = GetComponent<Rigidbody2D>();
 
-        speedText.text = playerSpeed.ToString();
+        speedText.text = "SPEED: " + playerSpeed.ToString();
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class playerMovement : MonoBehaviour
     {
         playerSpeed += amount;
 
-        speedText.text = playerSpeed.ToString();
+        speedText.text = "SPEED: " + playerSpeed.ToString();
     }
 }
 
