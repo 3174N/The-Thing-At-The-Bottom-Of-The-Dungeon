@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     {
         foreach (Text text in coinTexts)
         {
-            text.text = coins.ToString();
+            text.text = "SPEED: " + coins.ToString();
         }
     }
 

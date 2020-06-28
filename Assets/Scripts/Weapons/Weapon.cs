@@ -25,9 +25,9 @@ public class Weapon : ScriptableObject
     public void Attack(Transform attackPoint, LayerMask enemyLayers)
     {
         Vector2 center = new Vector2(1.5f, range);
-                
+
         //Detect enemies
-        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, center, 0, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, center, attackPoint.rotation.z, enemyLayers);
 
         //Damage them
         foreach (Collider2D enemy in hitEnemies)

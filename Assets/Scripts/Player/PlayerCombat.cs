@@ -114,6 +114,23 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(attackPoint.position, new Vector3(1, currentWeapon.range, 0));
+        // cache previous Gizmos settings
+        Color prevColor = Gizmos.color;
+        Matrix4x4 prevMatrix = Gizmos.matrix;
+
+        Gizmos.color = Color.red;
+        Gizmos.matrix = transform.localToWorldMatrix;
+
+        Vector3 boxPosition = attackPoint.position;
+
+        // convert from world position to local position 
+        boxPosition = transform.InverseTransformPoint(boxPosition);
+
+        Vector3 boxSize = new Vector3(1.5f, currentWeapon.range, 0);
+        Gizmos.DrawWireCube(boxPosition, boxSize);
+
+        // restore previous Gizmos settings
+        Gizmos.color = prevColor;
+        Gizmos.matrix = prevMatrix;
     }
 }
