@@ -15,7 +15,7 @@ public class playerMovement : MonoBehaviour
 
     public float timeToMove;
 
-    Vector2 movenent;
+    Vector2 movement;
     public Vector2 lookDirection = new Vector2(1, 0);
 
     Rigidbody2D rigidBody2;
@@ -34,23 +34,21 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movenent.x = Input.GetAxisRaw("Horizontal");
-        movenent.y = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        movenent.x = joystick.Horizontal;
-        movenent.y = joystick.Vertical;
+        movement.x = joystick.Horizontal;
+        movement.y = joystick.Vertical;
 
-        if (!Mathf.Approximately(movenent.x, 0.0f) || !Mathf.Approximately(movenent.y, 0.0f))
+        if (!Mathf.Approximately(movement.x, 0.0f) || !Mathf.Approximately(movement.y, 0.0f))
         {
-            lookDirection.Set(movenent.x, movenent.y);
+            lookDirection.Set(movement.x, movement.y);
             lookDirection.Normalize();
         }
 
         animator.SetFloat("Look X", lookDirection.x);
         animator.SetFloat("Look Y", lookDirection.y);
-        animator.SetFloat("Speed", movenent.magnitude);
-
-        Debug.Log(lookDirection);
+        animator.SetFloat("Speed", movement.magnitude);
     }
 
     /// <summary>
@@ -58,7 +56,7 @@ public class playerMovement : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        rigidBody2.MovePosition(rigidBody2.position + movenent * playerSpeed * Time.fixedDeltaTime);
+        rigidBody2.MovePosition(rigidBody2.position + movement * playerSpeed * Time.fixedDeltaTime);
     }
 
     /// <summary>

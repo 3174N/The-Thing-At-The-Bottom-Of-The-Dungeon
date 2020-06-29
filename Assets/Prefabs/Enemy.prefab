@@ -745,6 +745,7 @@ MonoBehaviour:
   - {fileID: 4380162312022956624, guid: 606bc6f05ba66ee419a9e7ea3fcdcebf, type: 3}
   - {fileID: 4380162312022956624, guid: 606bc6f05ba66ee419a9e7ea3fcdcebf, type: 3}
   - {fileID: 4380162312022956624, guid: 606bc6f05ba66ee419a9e7ea3fcdcebf, type: 3}
+  healthText: {fileID: 0}
 --- !u!61 &9018332771904167287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -758,7 +759,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.207066}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -769,7 +770,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.4187347}
   m_EdgeRadius: 0
 --- !u!50 &9018332771904167284
 Rigidbody2D:
@@ -894,7 +895,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1000
-  m_Sprite: {fileID: 21300000, guid: f5ce18c79e2387d49a9d785d8717d3ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78d03ce1d36c540d5a183e4b042d3afb, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
