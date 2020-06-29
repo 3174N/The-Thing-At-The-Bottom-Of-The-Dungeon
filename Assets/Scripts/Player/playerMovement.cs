@@ -66,8 +66,16 @@ public class playerMovement : MonoBehaviour
     public void ChangeSpeed(float amount)
     {
         playerSpeed += amount;
+        Mathf.Clamp(playerSpeed, 3, 15);
 
-        speedText.text = "SPEED: " + playerSpeed.ToString();
+        if (playerSpeed == 15)
+        {
+            speedText.text = "SPEED: " + playerSpeed.ToString() + "(MAX)";
+        }
+        else
+        {
+            speedText.text = "SPEED: " + playerSpeed.ToString();
+        }
     }
 }
 
