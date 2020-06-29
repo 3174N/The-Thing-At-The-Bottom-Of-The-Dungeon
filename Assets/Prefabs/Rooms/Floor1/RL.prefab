@@ -11220,6 +11220,9 @@ MonoBehaviour:
   doorColliders:
   - {fileID: 4262845197128966963}
   - {fileID: 6244933846995969040}
+  closedDoors:
+  - {fileID: 3357314546044864334}
+  - {fileID: 852951434672797188}
   enemies: []
 --- !u!61 &502209669793585262
 BoxCollider2D:
@@ -16444,15 +16447,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5fa6fd1e0619b746ae94cb06edb29bc, type: 3}
+--- !u!4 &4262845197433986664 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8938530718189027294, guid: a5fa6fd1e0619b746ae94cb06edb29bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 5126399621263434166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4262845197128966963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8938530718351393413, guid: a5fa6fd1e0619b746ae94cb06edb29bc,
     type: 3}
   m_PrefabInstance: {fileID: 5126399621263434166}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4262845197433986664 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8938530718189027294, guid: a5fa6fd1e0619b746ae94cb06edb29bc,
+--- !u!1 &3357314546044864334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7616486927773673208, guid: a5fa6fd1e0619b746ae94cb06edb29bc,
     type: 3}
   m_PrefabInstance: {fileID: 5126399621263434166}
   m_PrefabAsset: {fileID: 0}
@@ -16534,6 +16543,12 @@ Transform:
 --- !u!1 &6244933846995969040 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2785873989326712681, guid: 5247a4da68cf7cc41a5a71cbbe843abb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8071329717402438521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &852951434672797188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8923132050408963453, guid: 5247a4da68cf7cc41a5a71cbbe843abb,
     type: 3}
   m_PrefabInstance: {fileID: 8071329717402438521}
   m_PrefabAsset: {fileID: 0}

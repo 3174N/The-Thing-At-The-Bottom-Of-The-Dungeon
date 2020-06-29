@@ -1,10 +1,10 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomLocker : MonoBehaviour
 {
-    public GameObject[] doorColliders;
+    public GameObject[] doorColliders, closedDoors;
 
     float waitTime = 3f;
     bool isOpen;
@@ -38,10 +38,20 @@ public class RoomLocker : MonoBehaviour
             foreach (GameObject i in doorColliders)
             {
                 i.SetActive(false);
-
-                isOpen = true;
             }
+            foreach (GameObject i in closedDoors)
+            {
+                i.SetActive(false);
+            }
+            isOpen = true;
         }
+        /*else
+        {
+            foreach (GameObject i in closedDoors)
+            {
+                i.SetActive(true);
+            }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,6 +61,8 @@ public class RoomLocker : MonoBehaviour
             return;
 
         enemies.Add(other.gameObject);
+        
+        CheckLock();
     }
 
     public bool getIsOpen()
