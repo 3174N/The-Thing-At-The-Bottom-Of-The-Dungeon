@@ -6,10 +6,14 @@ Latest release: https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/
 ## TODO:
 - [x] Shop
 - [x] Inventory
-- [x] Boss
-- [ ] More Bosses
-- [x] Basic graphics
+- [ ] Bosses
+ - [x] Boss
+ - [ ] More bosses
+- [ ] Graphics
+ - [x] Basic graphics
+ - [ ] Better UI
 - [ ] More floors
 - [ ] Sound
-- [ ] Better UI
+ - [ ] SFX
+ - [ ] Soundtrack
 - [ ] Out of game shop
