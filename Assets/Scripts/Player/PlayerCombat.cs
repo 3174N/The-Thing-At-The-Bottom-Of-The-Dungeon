@@ -48,8 +48,10 @@ public class PlayerCombat : MonoBehaviour
     { 
         spriteRenderer.sprite = currentWeapon.sprite;
 
-        if (joystick.Vertical != 0f || joystick.Horizontal != 0f)
+        if (!Mathf.Approximately(joystick.Vertical, 0f) || !Mathf.Approximately(joystick.Horizontal, 0f))
         {
+            player.lookDirection.Set(joystick.Horizontal, joystick.Vertical);
+
             if (waitTime <= 0)
             {
                 animator.SetTrigger("Attack");
@@ -77,6 +79,7 @@ public class PlayerCombat : MonoBehaviour
 
         waitTime -= Time.deltaTime;
         staminaBar.SetStamina(waitTime);
+
     }
     
     /// <summary>
