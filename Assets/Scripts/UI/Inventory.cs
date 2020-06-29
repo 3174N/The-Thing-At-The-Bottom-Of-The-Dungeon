@@ -6,6 +6,8 @@ public class Inventory : MonoBehaviour
 {
     #region variables
     public GameObject inventory;
+
+    public GameObject[] canvases;
     #endregion
 
     // Start is called before the first frame update
@@ -27,6 +29,11 @@ public class Inventory : MonoBehaviour
     {
         inventory.SetActive(true);
 
+        foreach (GameObject canvas in canvases)
+        {
+            canvas.SetActive(false);
+        }
+
         Time.timeScale = 0f;
     }
 
@@ -36,6 +43,11 @@ public class Inventory : MonoBehaviour
     public void Close()
     {
         inventory.SetActive(false);
+
+        foreach (GameObject canvas in canvases)
+        {
+            canvas.SetActive(true);
+        }
 
         Time.timeScale = 1;
     }

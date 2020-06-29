@@ -34,8 +34,8 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        //movement.x = Input.GetAxisRaw("Horizontal");
+        //movement.y = Input.GetAxisRaw("Vertical");
 
         movement.x = joystick.Horizontal;
         movement.y = joystick.Vertical;
@@ -44,6 +44,10 @@ public class playerMovement : MonoBehaviour
         {
             lookDirection.Set(movement.x, movement.y);
             lookDirection.Normalize();
+        }
+        else
+        {
+            rigidBody2.velocity = new Vector2(0f, 0f);
         }
 
         animator.SetFloat("Look X", lookDirection.x);

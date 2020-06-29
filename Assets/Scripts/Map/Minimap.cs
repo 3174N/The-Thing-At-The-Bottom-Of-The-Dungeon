@@ -6,6 +6,8 @@ public class Minimap : MonoBehaviour
 {
     public GameObject minimap;
     public GameObject extendedMap;
+
+    public GameObject[] canvases;
     //public GameObject extendedCam;
 
     /// <summary>
@@ -42,6 +44,11 @@ public class Minimap : MonoBehaviour
         minimap.SetActive(false);
 
         extendedMap.SetActive(true);
+
+        foreach (GameObject canvas in canvases)
+        {
+            canvas.SetActive(false);
+        }
         
         Time.timeScale = 0f;
     }
@@ -54,7 +61,12 @@ public class Minimap : MonoBehaviour
         minimap.SetActive(true);
 
         extendedMap.SetActive(false);
-        
+
+        foreach (GameObject canvas in canvases)
+        {
+            canvas.SetActive(true);
+        }
+
         Time.timeScale = 1f;
     }
 }
