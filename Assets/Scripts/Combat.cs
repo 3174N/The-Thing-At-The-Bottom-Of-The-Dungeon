@@ -11,6 +11,7 @@ public class Combat : MonoBehaviour
 
     public bool isDead;
     public GameObject[] DropOnDeath;
+    public GameObject cameraDrop;
 
     float currentHealth;
     public float GetHealth { get { return currentHealth; } }
@@ -50,34 +51,40 @@ public class Combat : MonoBehaviour
 
             isDead = true;
         }
+    }
 
-        /// <summary>
-        /// Destroys the object if health is smaller or equel to 0
-        /// </summary>
-        void Die()
+    /// <summary>
+    /// Destroys the object if health is smaller or equel to 0
+    /// </summary>
+    void Die()
+    {
+        isDead = true;
+
+        EnemyMovement enemy = GetComponent<EnemyMovement>();
+        if (enemy != null || GetComponent<Boss>() != null)
         {
-            isDead = true;
+            isPLayer = false;
 
-            EnemyMovement enemy = GetComponent<EnemyMovement>();
-            if (enemy != null || GetComponent<Boss>() != null)
+            if (enemy != null)
             {
-                // GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>().ChangeHealth(15);
+                RoomLocker locker = GetComponentInParent<RoomLocker>();
 
-                if (enemy != null)
-                {
-                    RoomLocker locker = GetComponentInParent<RoomLocker>();
-
-                    locker.enemies.Remove(enemy.gameObject);
-                    locker.CheckLock();
-                }
-
-                GameObject randomDrop = DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)];
-                Instantiate(randomDrop, transform.position, Quaternion.identity);
-                Debug.Log("droped" + randomDrop + transform.position);
+                locker.enemies.Remove(enemy.gameObject);
+                locker.CheckLock();
             }
 
-            Destroy(gameObject);
+            GameObject randomDrop = DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)];
+            Instantiate(randomDrop, transform.position, Quaternion.identity);
+            Debug.Log("droped" + randomDrop + transform.position);
         }
+        else
+        {
+            isPLayer = true;
+
+            Instantiate(cameraDrop, transform.position, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
     }
 
     public void ChangeHealth(float amount)
