@@ -98,7 +98,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: bd8f702a27890494992abb45d0dc5d6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -153,6 +153,7 @@ MonoBehaviour:
   isDead: 0
   DropOnDeath:
   - {fileID: 7605563399200776438, guid: 67cbb074162184b439e6419a25072e7b, type: 3}
+  cameraDrop: {fileID: 0}
   healthText: {fileID: 0}
 --- !u!61 &8857514136301672032
 BoxCollider2D:
