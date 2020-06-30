@@ -17,4 +17,5 @@ MonoBehaviour:
   range: 1
   delay: 1
   weaponObject: {fileID: 0}
-  price: 10
+  minPrice: 5
+  maxPrice: 15

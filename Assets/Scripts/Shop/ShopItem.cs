@@ -31,7 +31,7 @@ public class ShopItem : MonoBehaviour
         if (sellWeapon)
         {
             weapon = weapons[(int)Random.Range(0f, weapons.Length)];
-            price = (int)Random.Range(weapon.price - 10f, weapon.price + 10f);
+            price = (int)Random.Range(weapon.minPrice, weapon.maxPrice);
             image.sprite = weapon.sprite;
         }
         else
@@ -40,7 +40,6 @@ public class ShopItem : MonoBehaviour
             powerUp.GetComponent<PowerUp>().Randomize();
             price = (int)Random.Range(0f, 20f);
             image.sprite = powerUp.GetComponent<SpriteRenderer>().sprite;
-            image.color = powerUp.GetComponent<SpriteRenderer>().color;
         }
            
         priceText.text = price.ToString();

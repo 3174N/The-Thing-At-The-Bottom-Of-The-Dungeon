@@ -18,4 +18,5 @@ MonoBehaviour:
   delay: 2
   weaponObject: {fileID: 2558292789893960948, guid: 410c5579418c64948a04eb865ce35967,
     type: 3}
-  price: 10
+  minPrice: 5
+  maxPrice: 15

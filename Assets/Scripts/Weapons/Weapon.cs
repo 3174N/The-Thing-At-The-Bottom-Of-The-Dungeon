@@ -14,7 +14,8 @@ public class Weapon : ScriptableObject
 
     public GameObject weaponObject;
 
-    public int price;
+    public int minPrice;
+    public int maxPrice;
     #endregion
 
     /// <summary>
