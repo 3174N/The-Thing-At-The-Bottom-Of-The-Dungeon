@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         {
             text.text = coins.ToString();
         }
+
         keyIndicator.color = keyColor;
     }
 

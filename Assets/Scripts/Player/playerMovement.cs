@@ -11,9 +11,6 @@ public class playerMovement : MonoBehaviour
     public FixedJoystick joystick;
 
     public Text speedText;
-    public Transform point;
-
-    public float timeToMove;
 
     Vector2 movement;
     public Vector2 lookDirection = new Vector2(1, 0);

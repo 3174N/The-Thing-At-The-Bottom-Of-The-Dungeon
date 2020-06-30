@@ -33,7 +33,7 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInParent<Animator>();
 
         player = GetComponentInParent<playerMovement>();
 
