@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     #region variables 
     public bool hasKey = false;
+    public Image keyIndicator;
+    public Color keyColor;
 
     int coins;
     public int GetCoins { get { return coins; } }
@@ -26,7 +28,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (hasKey)
+            keyIndicator.color = Color.white;
+        else
+            keyIndicator.color = keyColor;
     }
 
     /// <summary>
