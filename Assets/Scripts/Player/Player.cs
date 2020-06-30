@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         {
             text.text = coins.ToString();
         }
+        keyIndicator.color = keyColor;
     }
 
     // Update is called once per frame
@@ -30,8 +31,6 @@ public class Player : MonoBehaviour
     {
         if (hasKey)
             keyIndicator.color = Color.white;
-        else
-            keyIndicator.color = keyColor;
     }
 
     /// <summary>
