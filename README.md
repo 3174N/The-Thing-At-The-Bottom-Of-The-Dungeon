@@ -8,6 +8,7 @@ Latest release: https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/
 - [x] Inventory
 - [ ] Bosses
   - [x] Boss
+  - [ ] Animate bosses
   - [ ] More bosses
 - [ ] Enemies
   - [x] Basic enemies
