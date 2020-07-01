@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -234,8 +234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -98}
-  m_SizeDelta: {x: -490, y: -280}
+  m_AnchoredPosition: {x: 0, y: -120}
+  m_SizeDelta: {x: -870, y: -350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &249080831
 MonoBehaviour:
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -632,7 +632,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -30}
-  m_SizeDelta: {x: -490, y: -280}
+  m_SizeDelta: {x: -870, y: -350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &830886621
 MonoBehaviour:
@@ -792,7 +792,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: But Don't Worry! More Levels Are Coming Soon!
+  m_Text: But Don't Worry! More Floors Are Coming Soon!
 --- !u!222 &1057813222
 CanvasRenderer:
   m_ObjectHideFlags: 0
