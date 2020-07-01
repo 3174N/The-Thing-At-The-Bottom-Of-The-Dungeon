@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class RoomTemplates : MonoBehaviour
 {
+    public bool isMenu;
+    bool stop;
+    public bool Gstop { get { return stop; } }
+
     public GameObject[] bottomRooms;
     public GameObject[] topRooms;
     public GameObject[] leftRooms;
@@ -35,10 +39,16 @@ public class RoomTemplates : MonoBehaviour
 
         if (waitTime <= 0)
         {
+            if (isMenu)
+            {
+                stop = true;
+            }
+
             if (rooms.Count < 10)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
+
             for (int i = 0; i <= rooms.Count; i++)
             {
                 if (i == rooms.Count && !spawnedBoss)
