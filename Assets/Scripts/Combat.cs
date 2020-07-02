@@ -9,7 +9,6 @@ public class Combat : MonoBehaviour
     public float maxHealth;
     public HealthBar healthBar;
 
-    public bool isDead;
     public GameObject[] DropOnDeath;
     public GameObject cameraDrop;
 
@@ -25,10 +24,11 @@ public class Combat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (cameraDrop != null)
+            cameraDrop.SetActive(false);
+
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-
-        isDead = false;
 
         player = GetComponent<Player>();
         if (player != null)
@@ -45,11 +45,9 @@ public class Combat : MonoBehaviour
     void Update()
     {
         // Cheks if object is dead
-        if (isDead || currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Die();
-
-            isDead = true;
         }
     }
 
@@ -58,8 +56,6 @@ public class Combat : MonoBehaviour
     /// </summary>
     void Die()
     {
-        isDead = true;
-
         EnemyMovement enemy = GetComponent<EnemyMovement>();
         if (enemy != null || GetComponent<Boss>() != null)
         {
@@ -76,15 +72,20 @@ public class Combat : MonoBehaviour
             GameObject randomDrop = DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)];
             Instantiate(randomDrop, transform.position, Quaternion.identity);
             Debug.Log("droped" + randomDrop + transform.position);
+            
+            Destroy(gameObject);
         }
         else
         {
             isPLayer = true;
 
-            Instantiate(cameraDrop, transform.position, Quaternion.identity);
-        }
+            cameraDrop.SetActive(true);
 
-        Destroy(gameObject);
+            GetComponentInChildren<PlayerCombat>().OnDeath();
+
+            ChangeHealth(200);
+            gameObject.SetActive(false);
+        }
     }
 
     public void ChangeHealth(float amount)

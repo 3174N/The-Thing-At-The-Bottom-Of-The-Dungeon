@@ -249,7 +249,6 @@ GameObject:
   - component: {fileID: 3670176408487911944}
   - component: {fileID: 3670176408487911945}
   - component: {fileID: 1439865449}
-  - component: {fileID: 7819206259472087248}
   - component: {fileID: 355531381}
   m_Layer: 8
   m_Name: player
@@ -293,8 +292,6 @@ MonoBehaviour:
   playerSpeed: 3
   joystick: {fileID: 0}
   speedText: {fileID: 0}
-  point: {fileID: 0}
-  timeToMove: 0
   lookDirection: {x: 1, y: 0}
 --- !u!114 &2338722694888919679
 MonoBehaviour:
@@ -310,8 +307,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 300
   healthBar: {fileID: 0}
-  isDead: 0
   DropOnDeath: []
+  cameraDrop: {fileID: 0}
   healthText: {fileID: 0}
 --- !u!114 &7880444841074367651
 MonoBehaviour:
@@ -326,6 +323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasKey: 0
+  keyIndicator: {fileID: 0}
+  keyColor: {r: 0, g: 0, b: 0, a: 0}
   coinTexts:
   - {fileID: 0}
   - {fileID: 0}
@@ -395,20 +394,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7819206259472087248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3670176408487911950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eae1b91b1fe53444bc4cc98e818156c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasKey: 0
-  coinTexts: []
 --- !u!212 &355531381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -898,6 +883,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   deathMenu: {fileID: 0}
+  canvases: []
   joystick: {fileID: 0}
   damageBonus: 0
   damageText: {fileID: 0}

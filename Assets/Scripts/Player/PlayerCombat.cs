@@ -13,6 +13,7 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask enemyLayers;
 
     public GameObject deathMenu;
+    public GameObject[] canvases;
 
     public FixedJoystick joystick;
 
@@ -103,9 +104,14 @@ public class PlayerCombat : MonoBehaviour
         damageText.text = "DAMAGE: " + (damageBonus + currentWeapon.damage).ToString();
     }
 
-    private void OnDestroy()
+    public void OnDeath()
     {
         deathMenu.SetActive(true);
+
+        foreach (GameObject canvas in canvases)
+        {
+            canvas.SetActive(false);
+        }
     }
 
     public void ChangeDamage(float amount)

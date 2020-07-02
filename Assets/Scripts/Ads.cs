@@ -27,4 +27,18 @@ public class Ads : MonoBehaviour
             }
         }
     }
+
+    public static bool RewardAd()
+    {
+        if (Advertisement.IsReady("rewardedVideo"))
+        {
+            Advertisement.Show("rewardedVideo");
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

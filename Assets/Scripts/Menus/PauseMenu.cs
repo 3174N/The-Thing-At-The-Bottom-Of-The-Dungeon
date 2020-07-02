@@ -7,9 +7,14 @@ public class PauseMenu : MonoBehaviour
 {
     #region variables
     public GameObject pauseMenu;
+    public GameObject deathMenu;
     public GameObject[] canvases;
 
+    public GameObject player;
+    public GameObject cameraDrop;
+
     bool isPaused;
+    bool hasRevived;
 
     LevelLoader levelLoader;
     #endregion
@@ -69,6 +74,37 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
 
         levelLoader.LoadCurrentLevel();
+    }
+
+    public void Revive()
+    {
+        if (!hasRevived)
+        {
+            if (Ads.RewardAd())
+            {
+                cameraDrop.SetActive(false);
+                player.SetActive(true);
+
+                hasRevived = true;
+
+                foreach (GameObject canvas in canvases)
+                {
+                    canvas.SetActive(true);
+                }
+
+                deathMenu.SetActive(false);
+
+                Debug.Log("Revived");
+            }
+            else
+            {
+                Debug.Log("Cannot revive!");
+            }
+        }
+        else
+        {
+            Debug.Log("Cannot revive!");
+        }
     }
 
     public void Menu()
