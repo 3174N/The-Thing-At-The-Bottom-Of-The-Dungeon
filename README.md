@@ -5,7 +5,10 @@ Latest release: https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/
 
 ## TODO:
 - [x] Shop
-- [x] Inventory
+- [ ] Inventory
+  - [x] Display stats
+  - [ ] Display weapons
+  - [ ] Swap weapons
 - [ ] Bosses
   - [x] Boss
   - [ ] Animate bosses
