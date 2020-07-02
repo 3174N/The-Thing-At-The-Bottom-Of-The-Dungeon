@@ -567,7 +567,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1001
-  m_Sprite: {fileID: 21300000, guid: f5ce18c79e2387d49a9d785d8717d3ad, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -575,7 +575,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &9018332770963797895
@@ -745,6 +745,7 @@ MonoBehaviour:
   - {fileID: 4380162312022956624, guid: 606bc6f05ba66ee419a9e7ea3fcdcebf, type: 3}
   - {fileID: 4380162312022956624, guid: 606bc6f05ba66ee419a9e7ea3fcdcebf, type: 3}
   - {fileID: 4380162312022956624, guid: 606bc6f05ba66ee419a9e7ea3fcdcebf, type: 3}
+  cameraDrop: {fileID: 0}
   healthText: {fileID: 0}
 --- !u!61 &9018332771904167287
 BoxCollider2D:
