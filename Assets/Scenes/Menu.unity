@@ -5677,6 +5677,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1950325310, guid: 9c723d7d1cc3c7c45a132e4cb0963cd8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 756283689350480860, guid: 9c723d7d1cc3c7c45a132e4cb0963cd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5736,6 +5740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 756283689681001222, guid: 9c723d7d1cc3c7c45a132e4cb0963cd8,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c723d7d1cc3c7c45a132e4cb0963cd8, type: 3}

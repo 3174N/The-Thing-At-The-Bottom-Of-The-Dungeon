@@ -1,21 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    #region variables
     public Animator transition;
 
     public float transitionTime = 1;
 
-    /*private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            LoadNextLevel();
-        }
-    }*/
+    public Slider slider;
+    public Text progressText;
+    #endregion
 
     public void LoadNextLevel()
     {
@@ -43,6 +41,15 @@ public class LevelLoader : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(levelIndex);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+            slider.value = progress;
+            progressText.text = progress * 100 + "%";
+
+            yield return null;
+        }
     }
 }
