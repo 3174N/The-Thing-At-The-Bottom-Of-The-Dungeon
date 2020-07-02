@@ -17,7 +17,7 @@ Latest release: https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/
 - [ ] Graphics
   - [x] Basic graphics
   - [x] Better UI
-  - [ ] Loading screens
+  - [x] Loading screens
   - [ ] Better graphics
 - [ ] More floors
 - [ ] Sound
