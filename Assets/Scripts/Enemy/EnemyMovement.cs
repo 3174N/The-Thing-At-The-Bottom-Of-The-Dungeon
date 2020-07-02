@@ -28,17 +28,20 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        movement = (Vector2)player.transform.position - Rigidbody2.position;
-
-        if (!Mathf.Approximately(movement.x, 0.0f) || !Mathf.Approximately(movement.y, 0.0f))
+        if (player != null)
         {
-            lookDirection.Set(movement.x, movement.y);
-            lookDirection.Normalize();
-        }
+            movement = (Vector2)player.transform.position - Rigidbody2.position;
 
-        animator.SetFloat("Look X", lookDirection.x);
-        animator.SetFloat("Look Y", lookDirection.y);
-        animator.SetFloat("Speed", movement.magnitude);
+            if (!Mathf.Approximately(movement.x, 0.0f) || !Mathf.Approximately(movement.y, 0.0f))
+            {
+                lookDirection.Set(movement.x, movement.y);
+                lookDirection.Normalize();
+            }
+
+            animator.SetFloat("Look X", lookDirection.x);
+            animator.SetFloat("Look Y", lookDirection.y);
+            animator.SetFloat("Speed", movement.magnitude);
+        }
     }
 
     // Update is called once per frame

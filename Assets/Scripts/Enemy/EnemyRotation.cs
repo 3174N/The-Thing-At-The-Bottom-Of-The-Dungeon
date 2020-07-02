@@ -21,15 +21,18 @@ public class EnemyRotation : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Get the direction to the player
-        Vector2 direction = (Vector2)player.transform.position - rigidbody2d.position;
+        if (player != null)
+        {
+            // Get the direction to the player
+            Vector2 direction = (Vector2)player.transform.position - rigidbody2d.position;
 
-        // Rotate the point
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-        rigidbody2d.rotation = angle;
-        //Debug.Log(angle);
+            // Rotate the point
+            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+            rigidbody2d.rotation = angle;
+            //Debug.Log(angle);
 
-        // The point is following the enemy
-        rigidbody2d.position = enemy.position;
+            // The point is following the enemy
+            rigidbody2d.position = enemy.position;
+        }
     }
 }
