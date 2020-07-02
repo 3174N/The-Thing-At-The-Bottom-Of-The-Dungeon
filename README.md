@@ -7,6 +7,9 @@ Latest release: https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/
 - [x] Shop
 - [ ] Inventory
   - [x] Display stats
+    - [x] Health
+    - [x] Speed
+    - [x] Damage
   - [ ] Display weapons
   - [ ] Swap weapons
 - [ ] Bosses
