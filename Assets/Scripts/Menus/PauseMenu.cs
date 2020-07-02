@@ -87,14 +87,12 @@ public class PauseMenu : MonoBehaviour
 
                 hasRevived = true;
 
+                deathMenu.SetActive(false);
+
                 foreach (GameObject canvas in canvases)
                 {
                     canvas.SetActive(true);
                 }
-
-                deathMenu.SetActive(false);
-
-                Debug.Log("Revived");
             }
             else
             {

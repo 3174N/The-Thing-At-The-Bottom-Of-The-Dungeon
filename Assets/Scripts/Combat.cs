@@ -83,7 +83,7 @@ public class Combat : MonoBehaviour
 
             GetComponentInChildren<PlayerCombat>().OnDeath();
 
-            ChangeHealth(200);
+            currentHealth = 200;
             gameObject.SetActive(false);
         }
     }

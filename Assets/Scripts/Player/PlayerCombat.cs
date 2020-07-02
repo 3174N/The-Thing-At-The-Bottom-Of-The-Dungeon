@@ -13,6 +13,7 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask enemyLayers;
 
     public GameObject deathMenu;
+    public GameObject noRevDeathMenu;
     public GameObject[] canvases;
 
     public FixedJoystick joystick;
@@ -23,6 +24,8 @@ public class PlayerCombat : MonoBehaviour
     public float GetDamage { get { return damageBonus + currentWeapon.damage; } }
 
     public Text damageText;
+
+    bool hasRevived;
 
     playerMovement player;
     float playerSpeed;
@@ -42,6 +45,8 @@ public class PlayerCombat : MonoBehaviour
         staminaBar.SetMaxStamina(currentWeapon.delay);
 
         damageText.text = "DAMAGE: " + (damageBonus + currentWeapon.damage).ToString();
+
+        hasRevived = false;
     }
 
     // Update is called once per frame
@@ -106,12 +111,17 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnDeath()
     {
-        deathMenu.SetActive(true);
+        if (!hasRevived)
+            deathMenu.SetActive(true);
+        else
+            noRevDeathMenu.SetActive(true);
 
         foreach (GameObject canvas in canvases)
         {
             canvas.SetActive(false);
         }
+
+        hasRevived = true;
     }
 
     public void ChangeDamage(float amount)
