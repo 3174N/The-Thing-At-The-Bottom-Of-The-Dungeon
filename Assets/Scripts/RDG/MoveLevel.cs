@@ -7,7 +7,15 @@ public class MoveLevel : MonoBehaviour
 {
     #region variables
     public GameObject moveButton;
+
+    LevelLoader levelLoader;
     #endregion
+
+    private void Start()
+    {
+        levelLoader = Finder.GetLevelLoader();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         playerMovement player = other.GetComponent<playerMovement>();
@@ -24,6 +32,6 @@ public class MoveLevel : MonoBehaviour
 
     public void Move()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        levelLoader.LoadNextLevel();
     }
 }

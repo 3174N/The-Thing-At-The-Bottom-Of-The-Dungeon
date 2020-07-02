@@ -13,8 +13,7 @@ public class AddRoom : MonoBehaviour
     void Start()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        
-        if (!templates.Gstop)
-            templates.rooms.Add(gameObject);
+
+        templates.rooms.Add(gameObject);
     }   
 }

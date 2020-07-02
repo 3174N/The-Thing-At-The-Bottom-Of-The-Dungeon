@@ -5,10 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class RoomTemplates : MonoBehaviour
 {
-    public bool isMenu;
-    bool stop;
-    public bool Gstop { get { return stop; } }
-
+    #region variables
     public GameObject[] bottomRooms;
     public GameObject[] topRooms;
     public GameObject[] leftRooms;
@@ -21,13 +18,16 @@ public class RoomTemplates : MonoBehaviour
     public float waitTime;
     private bool spawnedBoss;
 
+    LevelLoader levelLoader;
+    #endregion
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
     void Start()
     {
-        
+        levelLoader = Finder.GetLevelLoader();
     }
 
     /// <summary>
@@ -38,15 +38,10 @@ public class RoomTemplates : MonoBehaviour
         waitTime -= Time.deltaTime;
 
         if (waitTime <= 0)
-        {
-            if (isMenu)
-            {
-                stop = true;
-            }
-
+        { 
             if (rooms.Count < 10)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                levelLoader.LoadCurrentLevel();
             }
 
             for (int i = 0; i <= rooms.Count; i++)

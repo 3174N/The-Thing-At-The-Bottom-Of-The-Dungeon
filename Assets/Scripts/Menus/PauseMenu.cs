@@ -5,15 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    #region variables
     public GameObject pauseMenu;
     public GameObject[] canvases;
 
     bool isPaused;
 
+    LevelLoader levelLoader;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1f;
+
+        levelLoader = Finder.GetLevelLoader();
     }
 
     // Update is called once per frame
@@ -60,11 +66,15 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+
+        levelLoader.LoadCurrentLevel();
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;
+
+        levelLoader.LoadMenu();
     }
 }

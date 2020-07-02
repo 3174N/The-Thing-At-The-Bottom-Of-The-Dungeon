@@ -10,6 +10,8 @@ TagManager:
   - Shop
   - Inventory
   - ShopItem
+  - Chest
+  - LevelLoader
   layers:
   - Default
   - TransparentFX

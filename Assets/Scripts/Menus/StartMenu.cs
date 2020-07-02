@@ -8,11 +8,18 @@ public class StartMenu : MonoBehaviour
     #region variables
     public GameObject shopPanel, settingsPanel;
     GameObject activePanel;
+
+    LevelLoader levelLoader;
     #endregion
+
+    private void Start()
+    {
+        levelLoader = Finder.GetLevelLoader();
+    }
 
     public void Launch()
     {
-        SceneManager.LoadScene(1);
+        levelLoader.LoadStart();
     }
 
     public void OpenShop()

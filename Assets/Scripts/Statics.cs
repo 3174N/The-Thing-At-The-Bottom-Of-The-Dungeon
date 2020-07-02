@@ -35,6 +35,11 @@ public class Finder : MonoBehaviour
 
         return null;
     }
+
+    public static LevelLoader GetLevelLoader()
+    {
+        return GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>();
+    }
 }
 
 public class Mover : MonoBehaviour
