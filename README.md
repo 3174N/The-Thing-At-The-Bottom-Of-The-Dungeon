@@ -1,6 +1,9 @@
 # The Thing At The Bottom Of The Dungeon
 A rogue-like dungeon crawler for android.
 
+Start of project:
+10/2/2020
+
 Latest release: https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/releases
 
 ## TODO / Roadmap:
