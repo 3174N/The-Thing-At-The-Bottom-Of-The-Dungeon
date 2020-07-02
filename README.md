@@ -1,4 +1,4 @@
-# The Thing At The Bottom Of The Dungeon
+# Project Dungeon Dweller
 A rogue-like dungeon crawler for android.
 
 Start of project:
