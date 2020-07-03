@@ -19,6 +19,8 @@ public class Combat : MonoBehaviour
 
     Player player;
     bool isPLayer;
+
+    GameManager gameManager;
     #endregion
 
     // Start is called before the first frame update
@@ -27,9 +29,6 @@ public class Combat : MonoBehaviour
         if (cameraDrop != null)
             cameraDrop.SetActive(false);
 
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-
         player = GetComponent<Player>();
         if (player != null)
         {
@@ -37,6 +36,13 @@ public class Combat : MonoBehaviour
 
             healthText.text = "HEALTH: " + currentHealth.ToString() + "/" + maxHealth.ToString();
         }
+
+        gameManager = Finder.GetGameManager();
+        if (isPLayer)
+            maxHealth = gameManager.maxHealth;
+
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     /// <summary>

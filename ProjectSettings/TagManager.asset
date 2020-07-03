@@ -12,6 +12,7 @@ TagManager:
   - ShopItem
   - Chest
   - LevelLoader
+  - GameManager
   layers:
   - Default
   - TransparentFX

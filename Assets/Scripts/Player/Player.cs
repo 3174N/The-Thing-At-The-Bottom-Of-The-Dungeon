@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public int GetCoins { get { return coins; } }
 
     public Text[] coinTexts;
+
+    GameManager gameManager;
     #endregion
 
     // Start is called before the first frame update
@@ -25,6 +27,9 @@ public class Player : MonoBehaviour
         }
 
         keyIndicator.color = keyColor;
+
+        gameManager = Finder.GetGameManager();
+        coins = gameManager.startingCoins;
     }
 
     // Update is called once per frame

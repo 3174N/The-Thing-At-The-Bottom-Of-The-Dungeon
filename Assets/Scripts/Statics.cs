@@ -40,6 +40,11 @@ public class Finder : MonoBehaviour
     {
         return GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>();
     }
+
+    public static GameManager GetGameManager()
+    {
+        return GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+    }
 }
 
 public class Mover : MonoBehaviour

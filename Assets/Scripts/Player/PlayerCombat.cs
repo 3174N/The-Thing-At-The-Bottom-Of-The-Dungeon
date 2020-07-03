@@ -32,6 +32,7 @@ public class PlayerCombat : MonoBehaviour
 
     Animator animator;
     SpriteRenderer spriteRenderer;
+    GameManager gameManager;
     #endregion
 
     void Start()
@@ -47,6 +48,9 @@ public class PlayerCombat : MonoBehaviour
         damageText.text = "DAMAGE: " + (damageBonus + currentWeapon.damage).ToString();
 
         hasRevived = false;
+
+        gameManager = Finder.GetGameManager();
+        damageBonus = gameManager.startingDamage;
     }
 
     // Update is called once per frame

@@ -26,6 +26,8 @@ public class playerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
 
         speedText.text = "SPEED: " + playerSpeed.ToString();
+
+        playerSpeed += Finder.GetGameManager().startingSpeed;
     }
 
     // Update is called once per frame
