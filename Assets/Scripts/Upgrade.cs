@@ -11,7 +11,6 @@ public class Upgrade : MonoBehaviour
     public int price;
 
     public int uses;
-    int used;
 
     public Text bonusText;
     public Text usesText;
@@ -20,38 +19,73 @@ public class Upgrade : MonoBehaviour
     private void Start()
     {
         bonusText.text = "+" + amount;
-        usesText.text = used + " / " + uses;
         priceText.text = price.ToString();
+
+        if (coins)
+        {
+            usesText.text = Finder.GetGameManager().coinsUses + " / " + uses;
+        }
+        else if (speed)
+        {
+            usesText.text = Finder.GetGameManager().speedUses + " / " + uses;
+        }
+        else if (health)
+        {
+            usesText.text = Finder.GetGameManager().healthUses + " / " + uses;
+        }
+        else if (damage)
+        {
+            usesText.text = Finder.GetGameManager().damageUses + " / " + uses;
+        }
     }
 
     public void Buy()
     {
-        if (used >= uses || price > Finder.GetGameManager().gems)
-            return;
-
-        used += 1;
-
         if (coins)
         {
+            if (Finder.GetGameManager().coinsUses >= uses || price > Finder.GetGameManager().gems)
+                return;
+
             Finder.GetGameManager().startingCoins += amount;
+
+            Finder.GetGameManager().coinsUses += 1;
+            usesText.text = Finder.GetGameManager().coinsUses + " / " + uses;
         }
         else if (speed)
         {
+            if (Finder.GetGameManager().speedUses >= uses || price > Finder.GetGameManager().gems)
+                return;
+
             Finder.GetGameManager().startingSpeed += amount;
+
+            Finder.GetGameManager().speedUses += 1;
+            usesText.text = Finder.GetGameManager().speedUses + " / " + uses;
         }
         else if (health)
         {
+            if (Finder.GetGameManager().healthUses >= uses || price > Finder.GetGameManager().gems)
+                return;
+
             Finder.GetGameManager().maxHealth += amount;
+
+            Finder.GetGameManager().healthUses += 1;
+            usesText.text = Finder.GetGameManager().healthUses + " / " + uses;
         }
         else if (damage)
         {
-            Finder.GetGameManager().startingDamage += amount;
-        }
+            if (Finder.GetGameManager().damageUses >= uses || price > Finder.GetGameManager().gems)
+                return;
 
-        usesText.text = used + " / " + uses;
+            Finder.GetGameManager().startingDamage += amount;
+
+            Finder.GetGameManager().damageUses += 1;
+            usesText.text = Finder.GetGameManager().damageUses + " / " + uses;
+        }
 
         Finder.GetGameManager().gems -= price;
         price *= 2;
         priceText.text = price.ToString();
+
+        Finder.GetGameManager().SaveShop();
     }
 }
