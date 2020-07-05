@@ -2770,6 +2770,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: 0ed5b0f0a8384284a9a0d2b002c23ba6,
         type: 3}
+    - target: {fileID: 6778867230979359468, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778867230979359468, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778867230979359468, guid: 66273541bedce5f489b3261509d8dbcb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6778867231848547094, guid: 66273541bedce5f489b3261509d8dbcb,
         type: 3}
       propertyPath: m_Name
@@ -8003,6 +8018,42 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 593972108}
+    - target: {fileID: 6080506427870232839, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6080506427870232839, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6080506427870232839, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6547075864008336474, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f39a9205e4394ee1b6ba8269428d176,
+        type: 3}
+    - target: {fileID: 6547075864008336474, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6547075864008336474, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6547075864008336474, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7880444841074367651, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
         type: 3}
       propertyPath: coinTexts.Array.data[0]
