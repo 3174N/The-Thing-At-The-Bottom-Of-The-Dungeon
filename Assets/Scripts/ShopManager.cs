@@ -12,4 +12,16 @@ public class ShopManager : MonoBehaviour
     {
         gems.text = Finder.GetGameManager().gems.ToString();
     }
+
+    public void GetGems(int amount)
+    {
+        if (Ads.RewardAd())
+        {
+            Finder.GetGameManager().gems += amount;
+        }
+        else
+        {
+            Debug.Log("Can't display ad.");
+        }
+    }
 }
