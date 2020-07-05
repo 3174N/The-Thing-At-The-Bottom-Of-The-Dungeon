@@ -44,6 +44,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gems: 0
+  speedUses: 0
+  damageUses: 0
+  healthUses: 0
+  coinsUses: 0
+  speedPrice: 50
+  damagePrice: 50
+  healthPrice: 50
+  coinsPrice: 50
   startingCoins: 0
   startingSpeed: 0
   maxHealth: 300

@@ -19,6 +19,23 @@ public class Upgrade : MonoBehaviour
     private void Start()
     {
         bonusText.text = "+" + amount;
+
+        if (speed)
+        {
+            price = Finder.GetGameManager().speedPrice;
+        }
+        else if (damage)
+        {
+            price = Finder.GetGameManager().damagePrice;
+        }
+        else if (health)
+        {
+            price = Finder.GetGameManager().healthPrice;
+        }
+        else if (coins)
+        {
+            price = Finder.GetGameManager().coinsPrice;
+        }
         priceText.text = price.ToString();
 
         if (coins)
@@ -85,6 +102,23 @@ public class Upgrade : MonoBehaviour
         Finder.GetGameManager().gems -= price;
         price *= 2;
         priceText.text = price.ToString();
+
+        if (speed)
+        {
+            Finder.GetGameManager().speedPrice = price;
+        }
+        else if (damage)
+        {
+            Finder.GetGameManager().damagePrice = price;
+        }
+        else if (health)
+        {
+            Finder.GetGameManager().healthPrice = price;
+        }
+        else if (coins)
+        {
+            Finder.GetGameManager().coinsPrice = price;
+        }
 
         Finder.GetGameManager().SaveShop();
     }

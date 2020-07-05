@@ -12,6 +12,11 @@ public class ShopData
     public int healthUses;
     public int coinsUses;
 
+    public int speedPrice;
+    public int damagePrice;
+    public int healthPrice;
+    public int coinsPrice;
+
     public ShopData(GameManager manager)
     {
         gems = manager.gems;
@@ -20,5 +25,10 @@ public class ShopData
         damageUses = manager.damageUses;
         healthUses = manager.healthUses;
         coinsUses = manager.coinsUses;
+
+        speedPrice = manager.speedPrice;
+        damagePrice = manager.damagePrice;
+        healthPrice = manager.healthPrice;
+        coinsPrice = manager.coinsPrice;
     }
 }

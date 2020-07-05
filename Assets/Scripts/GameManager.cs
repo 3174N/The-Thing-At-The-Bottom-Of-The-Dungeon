@@ -15,6 +15,11 @@ public class GameManager : MonoBehaviour
     public int healthUses;
     public int coinsUses;
 
+    public int speedPrice = 50;
+    public int damagePrice = 50;
+    public int healthPrice = 50;
+    public int coinsPrice = 50;
+
     [Header("STARTING BONUSES")]
     public int startingCoins;
     public int startingSpeed;
@@ -57,5 +62,10 @@ public class GameManager : MonoBehaviour
         damageUses = data.damageUses;
         healthUses = data.healthUses;
         coinsUses = data.coinsUses;
+
+        speedPrice = data.speedPrice;
+        damagePrice = data.damagePrice;
+        healthPrice = data.healthPrice;
+        coinsPrice = data.coinsPrice;
     }
 }
