@@ -77,7 +77,8 @@ public class Combat : MonoBehaviour
 
             GameObject randomDrop = DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)];
             Instantiate(randomDrop, transform.position, Quaternion.identity);
-            Debug.Log("droped" + randomDrop + transform.position);
+            
+            Finder.GetGameManager().enemies += 1;
             
             Destroy(gameObject);
         }
