@@ -20,6 +20,8 @@ public class StartMenu : MonoBehaviour
     public void Launch()
     {
         levelLoader.LoadStart();
+
+        Finder.GetGameManager().SaveShop();
     }
 
     public void OpenShop()
@@ -45,11 +47,15 @@ public class StartMenu : MonoBehaviour
 
     public void Quit()
     {
+        Finder.GetGameManager().SaveShop();
+
         Application.Quit();
     }
 
     public void MainMenu()
     {
+        Finder.GetGameManager().SaveShop();
+
         SceneManager.LoadScene("Menu");
     }
 }

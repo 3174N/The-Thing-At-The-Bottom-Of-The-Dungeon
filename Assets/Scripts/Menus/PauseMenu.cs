@@ -73,6 +73,8 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
 
+        Finder.GetGameManager().SaveShop();
+
         levelLoader.LoadCurrentLevel();
     }
 
@@ -108,6 +110,8 @@ public class PauseMenu : MonoBehaviour
     public void Menu()
     {
         Time.timeScale = 1f;
+
+        Finder.GetGameManager().SaveShop();
 
         levelLoader.LoadMenu();
     }
