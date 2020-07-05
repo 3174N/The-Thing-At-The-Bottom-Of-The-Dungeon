@@ -32,6 +32,7 @@ Latest release: https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/
 - [ ] Sound
   - [ ] SFX
   - [ ] Soundtrack
-- [ ] Out of game shop
+- [x] Out of game shop
 - [ ] Visual effects
   - [ ] Particals
+- [x] Save system
