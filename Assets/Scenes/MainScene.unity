@@ -477,6 +477,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4206284184670582044, guid: 015803f615d81a2498ef7de62f39720a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4785184003370412987, guid: 015803f615d81a2498ef7de62f39720a,
         type: 3}
       propertyPath: m_textInfo.characterCount

@@ -19,5 +19,7 @@ public class Bonuses : MonoBehaviour
 
         Finder.GetGameManager().gems += gems;
         bonusText.text = "+" + gems;
+
+        Finder.GetGameManager().SaveShop();
     }
 }
