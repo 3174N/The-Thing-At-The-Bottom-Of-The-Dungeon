@@ -6,6 +6,8 @@ public class Coin : MonoBehaviour
 {
     #region variables 
     public int amount;
+
+    public GameObject popUp;
     #endregion
 
     // Start is called before the first frame update
@@ -38,5 +40,8 @@ public class Coin : MonoBehaviour
     public void Apply(Player player)
     {
         player.ChangeCoins((int)amount);
+
+        GameObject pop = Instantiate(popUp);
+        Destroy(pop.gameObject, 1f);
     }
 }

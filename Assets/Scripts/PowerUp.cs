@@ -8,6 +8,8 @@ public class PowerUp : MonoBehaviour
     public float amount;
 
     public bool speed, damage, health;
+
+    public GameObject healthPop, damagePop, speedPop;
     #endregion
 
     // Start is called before the first frame update
@@ -36,11 +38,23 @@ public class PowerUp : MonoBehaviour
     public void Apply(playerMovement player)
     {
         if (speed)
+        {
             player.ChangeSpeed(amount);
+            GameObject pop = Instantiate(speedPop);
+            Destroy(pop.gameObject, 1f);
+        }
         else if (damage)
+        {
             player.gameObject.GetComponentInChildren<PlayerCombat>().ChangeDamage(amount);
+            GameObject pop = Instantiate(damagePop);
+            Destroy(pop.gameObject, 1f);
+        }
         else if (health)
+        {
             player.gameObject.GetComponent<Combat>().ChangeHealth(amount);
+            GameObject pop = Instantiate(healthPop);
+            Destroy(pop.gameObject, 1f);
+        }
     }
 
     public void Randomize()
