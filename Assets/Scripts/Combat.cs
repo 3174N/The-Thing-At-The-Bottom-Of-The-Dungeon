@@ -112,7 +112,8 @@ public class Combat : MonoBehaviour
 
         if (amount < 0)
         {
-            Instantiate(attackParticals, transform.position, Quaternion.identity);
+            GameObject par = Instantiate(attackParticals, transform.position, Quaternion.identity);
+            Destroy(par, 1f);
         }
     }
 
