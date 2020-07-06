@@ -12,6 +12,8 @@ public class Combat : MonoBehaviour
     public GameObject[] DropOnDeath;
     public GameObject cameraDrop;
 
+    public GameObject attackParticals;
+
     float currentHealth;
     public float GetHealth { get { return currentHealth; } }
 
@@ -106,6 +108,11 @@ public class Combat : MonoBehaviour
         if (isPLayer)
         {
             healthText.text = "HEALTH: " + currentHealth.ToString() + "/" + maxHealth.ToString();
+        }
+
+        if (amount < 0)
+        {
+            Instantiate(attackParticals, transform.position, Quaternion.identity);
         }
     }
 

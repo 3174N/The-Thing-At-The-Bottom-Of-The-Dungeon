@@ -734,7 +734,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   healthBar: {fileID: 4933679343224844577}
-  isDead: 0
   DropOnDeath:
   - {fileID: 2185356882976858144, guid: 79cae6d0a9e5d424e87ade73c61b8331, type: 3}
   - {fileID: 2185356882976858144, guid: 79cae6d0a9e5d424e87ade73c61b8331, type: 3}
@@ -746,6 +745,8 @@ MonoBehaviour:
   - {fileID: 4380162312022956624, guid: 606bc6f05ba66ee419a9e7ea3fcdcebf, type: 3}
   - {fileID: 4380162312022956624, guid: 606bc6f05ba66ee419a9e7ea3fcdcebf, type: 3}
   cameraDrop: {fileID: 0}
+  attackParticals: {fileID: 5886605432485418561, guid: e563ab876844b42499d64a02e6aad830,
+    type: 3}
   healthText: {fileID: 0}
 --- !u!61 &9018332771904167287
 BoxCollider2D:
