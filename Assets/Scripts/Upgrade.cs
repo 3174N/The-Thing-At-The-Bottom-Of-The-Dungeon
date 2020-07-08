@@ -61,7 +61,10 @@ public class Upgrade : MonoBehaviour
         if (coins)
         {
             if (Finder.GetGameManager().coinsUses >= uses || price > Finder.GetGameManager().gems)
+            {
+                FindObjectOfType<AudioManager>().Play("Button");
                 return;
+            }
 
             Finder.GetGameManager().startingCoins += amount;
 
@@ -71,7 +74,10 @@ public class Upgrade : MonoBehaviour
         else if (speed)
         {
             if (Finder.GetGameManager().speedUses >= uses || price > Finder.GetGameManager().gems)
+            {
+                FindObjectOfType<AudioManager>().Play("Button");
                 return;
+            }
 
             Finder.GetGameManager().startingSpeed += amount;
 
@@ -81,7 +87,10 @@ public class Upgrade : MonoBehaviour
         else if (health)
         {
             if (Finder.GetGameManager().healthUses >= uses || price > Finder.GetGameManager().gems)
+            {
+                FindObjectOfType<AudioManager>().Play("Button");
                 return;
+            }
 
             Finder.GetGameManager().maxHealth += amount;
 
@@ -91,7 +100,10 @@ public class Upgrade : MonoBehaviour
         else if (damage)
         {
             if (Finder.GetGameManager().damageUses >= uses || price > Finder.GetGameManager().gems)
+            {
+                FindObjectOfType<AudioManager>().Play("Button");
                 return;
+            }
 
             Finder.GetGameManager().startingDamage += amount;
 

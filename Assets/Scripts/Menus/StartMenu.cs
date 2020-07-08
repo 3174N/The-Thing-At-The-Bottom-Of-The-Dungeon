@@ -58,9 +58,4 @@ public class StartMenu : MonoBehaviour
 
         SceneManager.LoadScene("Menu");
     }
-
-    public void PlaySound()
-    {
-        FindObjectOfType<AudioManager>().Play("Button");
-    }
 }

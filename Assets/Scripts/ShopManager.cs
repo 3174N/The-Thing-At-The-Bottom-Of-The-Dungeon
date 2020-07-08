@@ -22,6 +22,8 @@ public class ShopManager : MonoBehaviour
         else
         {
             Debug.Log("Can't display ad.");
+            
+            FindObjectOfType<AudioManager>().Play("Button");
         }
     }
 }

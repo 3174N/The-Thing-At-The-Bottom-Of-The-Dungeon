@@ -99,6 +99,8 @@ public class PauseMenu : MonoBehaviour
             else
             {
                 Debug.Log("Cannot revive!");
+
+                FindObjectOfType<AudioManager>().Play("Button");
             }
         }
         else
