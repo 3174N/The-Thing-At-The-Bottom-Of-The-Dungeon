@@ -31,6 +31,8 @@ public class PowerUp : MonoBehaviour
         {
             Apply(player);
 
+            FindObjectOfType<AudioManager>().Play("Powerup");
+
             Destroy(gameObject);
         }
     }

@@ -29,6 +29,8 @@ public class Coin : MonoBehaviour
         {
             Apply(player);
 
+            FindObjectOfType<AudioManager>().Play("Coin");
+
             Destroy(gameObject);
         }
     }
