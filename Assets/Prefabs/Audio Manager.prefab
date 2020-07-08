@@ -62,3 +62,27 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Player Hit
+    clip: {fileID: 8300000, guid: fbd605ac5fa2b874f9481f606c8534f6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemy Hit
+    clip: {fileID: 8300000, guid: 5591eeff2947a06459617d8e21601868, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemy Death
+    clip: {fileID: 8300000, guid: c96ec989a18a61b48b78ff80a012e41b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Chest
+    clip: {fileID: 8300000, guid: bc7fac486ba02d449a0b1772332dc305, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

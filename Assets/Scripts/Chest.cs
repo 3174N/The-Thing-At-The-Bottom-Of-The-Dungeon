@@ -98,6 +98,8 @@ public class Chest : MonoBehaviour
 
             isOpen = true;
 
+            FindObjectOfType<AudioManager>().Play("Chest");
+
             // GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>().ChangeHealth(15);
         }
     }

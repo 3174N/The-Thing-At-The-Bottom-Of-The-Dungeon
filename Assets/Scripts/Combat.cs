@@ -68,7 +68,9 @@ public class Combat : MonoBehaviour
     {
         EnemyMovement enemy = GetComponent<EnemyMovement>();
         if (!isPLayer)
-        { 
+        {
+            FindObjectOfType<AudioManager>().Play("Enemy Death");
+
             isPLayer = false;
 
             if (enemy != null)
@@ -88,6 +90,8 @@ public class Combat : MonoBehaviour
         }
         else
         {
+            FindObjectOfType<AudioManager>().Play("Player Death");
+
             isPLayer = true;
 
             cameraDrop.SetActive(true);
@@ -116,6 +120,11 @@ public class Combat : MonoBehaviour
         {
             GameObject par = Instantiate(attackParticals, transform.position, Quaternion.identity);
             Destroy(par, 1f);
+
+            if (isPLayer)
+                FindObjectOfType<AudioManager>().Play("Player Hit");
+            else
+                FindObjectOfType<AudioManager>().Play("Enemy Hit");
         }
     }
 
