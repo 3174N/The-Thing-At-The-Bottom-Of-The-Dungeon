@@ -60,6 +60,8 @@ MonoBehaviour:
     type: 3}
   attackObject2: {fileID: 3719489445437646059, guid: e5fd49eccc2acd44b897a5df42c3b275,
     type: 3}
+  attackI: {fileID: 8300000, guid: 5c7ac4ec9fcdc6642a76e2a91b129f65, type: 3}
+  attackII: {fileID: 8300000, guid: 6ca2d20122462d04b9176c90d7366e4c, type: 3}
 --- !u!212 &7973459280031409879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -150,10 +152,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 300
   healthBar: {fileID: 7008076160674588688}
-  isDead: 0
   DropOnDeath:
   - {fileID: 7605563399200776438, guid: 67cbb074162184b439e6419a25072e7b, type: 3}
   cameraDrop: {fileID: 0}
+  attackParticals: {fileID: 0}
   healthText: {fileID: 0}
 --- !u!61 &8857514136301672032
 BoxCollider2D:

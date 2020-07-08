@@ -24,11 +24,16 @@ public class Boss : MonoBehaviour
 
     public GameObject attackObject;
     public GameObject attackObject2;
+
+    public AudioClip attackI;
+    public AudioClip attackII;
+
     Vector2 startPos;
     Vector2 newStartPos;
     Vector2 movement;
-    Rigidbody2D rigidbody2;
 
+    AudioSource source;
+    Rigidbody2D rigidbody2;
     Player player;
     #endregion
 
@@ -44,6 +49,7 @@ public class Boss : MonoBehaviour
         isAttacking = false;
         player = GameObject.FindObjectOfType<Player>();
         rigidbody2 = GetComponent<Rigidbody2D>();
+        source = GetComponent<AudioSource>();
 
         Destroy(Finder.FindClosestTag(transform, "Chest", closeDistance));
     }
@@ -65,11 +71,17 @@ public class Boss : MonoBehaviour
                     GameObject attackClone = Instantiate(attackObject, transform.position, Quaternion.identity);
                     Destroy(attackClone, 5f);
 
+                    source.clip = attackI;
+                    source.Play();
+
                     waitTime = maxWaitTime;
                     break;
                 case 2:
                     for (int i = 0; i < 3; i++)
                     {
+                        source.clip = attackII;
+                        source.Play();
+
                         attackClone = Instantiate(attackObject2, transform.position, Quaternion.identity);
                         Destroy(attackClone, 5f);
                     }
