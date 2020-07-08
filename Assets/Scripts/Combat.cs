@@ -58,6 +58,8 @@ public class Combat : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            if (!isPLayer)
+                Destroy(gameObject);
         }
     }
 
@@ -67,7 +69,7 @@ public class Combat : MonoBehaviour
     void Die()
     {
         EnemyMovement enemy = GetComponent<EnemyMovement>();
-        if ((enemy != null || GetComponent<Boss>() != null) && !isDead)
+        if (!isPLayer)
         {
             isDead = true;
             isPLayer = false;
@@ -82,8 +84,8 @@ public class Combat : MonoBehaviour
 
             GameObject randomDrop = DropOnDeath[(int)Random.Range(0, DropOnDeath.Length)];
             Instantiate(randomDrop, transform.position, Quaternion.identity);
-            
-            Finder.GetGameManager().enemies += 1;
+
+            GameObject.FindObjectOfType<GameManager>().enemies += 1;
             
             Destroy(gameObject);
         }
