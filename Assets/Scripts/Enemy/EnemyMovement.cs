@@ -14,6 +14,8 @@ public class EnemyMovement : MonoBehaviour
     Rigidbody2D Rigidbody2;
     RoomDiscovery room;
     Animator animator;
+    AudioSource source;
+    bool isPlaying;
     #endregion
 
     // Start is called before the first frame update
@@ -22,6 +24,7 @@ public class EnemyMovement : MonoBehaviour
         Rigidbody2 = GetComponent<Rigidbody2D>();
         room = GetComponentInParent<RoomDiscovery>();
         animator = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
 
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -36,6 +39,17 @@ public class EnemyMovement : MonoBehaviour
             {
                 lookDirection.Set(movement.x, movement.y);
                 lookDirection.Normalize();
+
+                if (!isPlaying && room.hasEntered)
+                {
+                    source.Play();
+                    isPlaying = true;
+                }
+            }
+            else
+            {
+                source.Stop();
+                isPlaying = false;
             }
 
             animator.SetFloat("Look X", lookDirection.x);
