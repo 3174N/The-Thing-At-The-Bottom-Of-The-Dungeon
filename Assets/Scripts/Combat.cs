@@ -22,8 +22,6 @@ public class Combat : MonoBehaviour
     Player player;
     bool isPLayer;
 
-    bool isDead;
-
     GameManager gameManager;
     #endregion
 
@@ -70,8 +68,7 @@ public class Combat : MonoBehaviour
     {
         EnemyMovement enemy = GetComponent<EnemyMovement>();
         if (!isPLayer)
-        {
-            isDead = true;
+        { 
             isPLayer = false;
 
             if (enemy != null)

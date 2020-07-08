@@ -14,7 +14,7 @@ public class Shop : MonoBehaviour
     public Text coinText;
     
     [SerializeField]
-    GameObject shop;
+    GameObject shop = null;
 
     SpriteRenderer sprite;
 
@@ -62,7 +62,7 @@ public class Shop : MonoBehaviour
     {
         shop.SetActive(true);
 
-        coinText.text = inventory.coinsText.text;
+        //coinText.text = inventory.coinsText.text;
     }
 
     /// <summary>

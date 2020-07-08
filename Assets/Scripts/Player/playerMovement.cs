@@ -17,6 +17,9 @@ public class playerMovement : MonoBehaviour
 
     Rigidbody2D rigidBody2;
     Animator animator;
+    AudioSource audioSource;
+
+    bool isPlaying;
     #endregion
 
     // Start is called before the first frame update
@@ -24,6 +27,7 @@ public class playerMovement : MonoBehaviour
     {
         rigidBody2 = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         speedText.text = "SPEED: " + playerSpeed.ToString();
 
@@ -43,10 +47,17 @@ public class playerMovement : MonoBehaviour
         {
             lookDirection.Set(movement.x, movement.y);
             lookDirection.Normalize();
+
+            if (!isPlaying)
+            {
+                isPlaying = true;
+                audioSource.Play();
+            }
         }
         else
         {
-            rigidBody2.velocity = new Vector2(0f, 0f);
+            audioSource.Stop();
+            isPlaying = false;
         }
 
         animator.SetFloat("Look X", lookDirection.x);
