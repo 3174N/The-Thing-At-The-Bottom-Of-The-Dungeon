@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager instance;
 
     [Header("SHOP")]
     public int gems;
@@ -31,15 +31,15 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null)
-        {
-            GameObject.Destroy(Instance);
-        }
+        if (instance == null)
+            instance = this;
         else
         {
-            Instance = this;
-            DontDestroyOnLoad(this);
+            Destroy(gameObject);
+            return;
         }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()

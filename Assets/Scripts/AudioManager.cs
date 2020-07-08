@@ -6,13 +6,13 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-    public static AudioManager instanse;
+    public static AudioManager instance;
 
     // Start is called before the first frame update
     void Awake()
     {
-        if (instanse == null)
-            instanse = this;
+        if (instance == null)
+            instance = this;
         else
         {
             Destroy(gameObject);
