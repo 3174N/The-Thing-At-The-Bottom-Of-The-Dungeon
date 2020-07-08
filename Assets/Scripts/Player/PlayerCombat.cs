@@ -49,7 +49,7 @@ public class PlayerCombat : MonoBehaviour
 
         hasRevived = false;
 
-        gameManager = Finder.GetGameManager();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
         damageBonus = gameManager.startingDamage;
     }
 

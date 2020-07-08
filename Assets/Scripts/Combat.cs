@@ -22,6 +22,8 @@ public class Combat : MonoBehaviour
     Player player;
     bool isPLayer;
 
+    bool isDead;
+
     GameManager gameManager;
     #endregion
 
@@ -39,7 +41,7 @@ public class Combat : MonoBehaviour
             healthText.text = "HEALTH: " + currentHealth.ToString() + "/" + maxHealth.ToString();
         }
 
-        gameManager = Finder.GetGameManager();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
         if (isPLayer)
             maxHealth = gameManager.maxHealth;
 
@@ -65,8 +67,9 @@ public class Combat : MonoBehaviour
     void Die()
     {
         EnemyMovement enemy = GetComponent<EnemyMovement>();
-        if (enemy != null || GetComponent<Boss>() != null)
+        if ((enemy != null || GetComponent<Boss>() != null) && !isDead)
         {
+            isDead = true;
             isPLayer = false;
 
             if (enemy != null)

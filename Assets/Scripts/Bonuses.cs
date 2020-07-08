@@ -13,7 +13,7 @@ public class Bonuses : MonoBehaviour
 
     private void OnEnable()
     {
-        gems = (int)Finder.GetGameManager().enemies / 10;
+        gems = (int)GameObject.FindObjectOfType<GameManager>().enemies / 5;
         if (isComplete)
             gems += 10;
 

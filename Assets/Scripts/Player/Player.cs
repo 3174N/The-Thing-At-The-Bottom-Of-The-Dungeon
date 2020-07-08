@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
         keyIndicator.color = keyColor;
 
-        gameManager = Finder.GetGameManager();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
         coins = gameManager.startingCoins;
     }
 

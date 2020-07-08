@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        LoadShop();
+        //LoadShop();
     }
 
     public void SaveShop()

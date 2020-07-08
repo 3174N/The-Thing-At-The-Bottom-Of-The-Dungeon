@@ -21,7 +21,7 @@ public class StartMenu : MonoBehaviour
     {
         levelLoader.LoadStart();
 
-        Finder.GetGameManager().SaveShop();
+        GameObject.FindObjectOfType<GameManager>().SaveShop();
     }
 
     public void OpenShop()
@@ -47,14 +47,14 @@ public class StartMenu : MonoBehaviour
 
     public void Quit()
     {
-        Finder.GetGameManager().SaveShop();
+        GameObject.FindObjectOfType<GameManager>().SaveShop();
 
         Application.Quit();
     }
 
     public void MainMenu()
     {
-        Finder.GetGameManager().SaveShop();
+        GameObject.FindObjectOfType<GameManager>().SaveShop();
 
         SceneManager.LoadScene("Menu");
     }

@@ -42,7 +42,7 @@ public class Boss : MonoBehaviour
     {
         waitTime = maxWaitTime;
         isAttacking = false;
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player = GameObject.FindObjectOfType<Player>();
         rigidbody2 = GetComponent<Rigidbody2D>();
 
         Destroy(Finder.FindClosestTag(transform, "Chest", closeDistance));

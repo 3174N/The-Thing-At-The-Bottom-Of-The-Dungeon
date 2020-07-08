@@ -120,6 +120,6 @@ public class Upgrade : MonoBehaviour
             Finder.GetGameManager().coinsPrice = price;
         }
 
-        Finder.GetGameManager().SaveShop();
+        GameObject.FindObjectOfType<GameManager>().SaveShop();
     }
 }
