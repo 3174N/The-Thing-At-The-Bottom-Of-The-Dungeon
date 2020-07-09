@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicOn: 1
   sfxOn: 1
+  codes: []
   gems: 0
   speedUses: 0
   damageUses: 0
