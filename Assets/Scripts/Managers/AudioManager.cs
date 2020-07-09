@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Play the sound with the coresponding name
+    /// Plays the sound with the coresponding name
     /// </summary>
     /// <param name="name"></param>
     public void Play(string name)
@@ -49,6 +49,25 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound \"" + name + "\" not found!");
             return;
         }
-        s.source.Play();
+
+        if (s.type == Sound.SoundType.SFX && FindObjectOfType<GameManager>().sfxOn)
+            s.source.Play();
+        if (s.type == Sound.SoundType.Music && FindObjectOfType<GameManager>().musicOn)
+            s.source.Play();
+    }
+
+    /// <summary>
+    /// Stops the sound with the coresponding name
+    /// </summary>
+    /// <param name="name"></param>
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound \"" + name + "\" not found!");
+            return;
+        }
+        s.source.Stop();
     }
 }

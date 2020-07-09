@@ -49,52 +49,61 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    type: 0
     source: {fileID: 0}
   - name: Powerup
     clip: {fileID: 8300000, guid: b1dd4145f01abf748adc4b98d4be1480, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    type: 0
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 1
+    type: 1
     source: {fileID: 0}
   - name: Player Hit
     clip: {fileID: 8300000, guid: fbd605ac5fa2b874f9481f606c8534f6, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    type: 0
     source: {fileID: 0}
   - name: Enemy Hit
     clip: {fileID: 8300000, guid: 5591eeff2947a06459617d8e21601868, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    type: 0
     source: {fileID: 0}
   - name: Enemy Death
     clip: {fileID: 8300000, guid: c96ec989a18a61b48b78ff80a012e41b, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    type: 0
     source: {fileID: 0}
   - name: Chest
     clip: {fileID: 8300000, guid: bc7fac486ba02d449a0b1772332dc305, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    type: 0
     source: {fileID: 0}
   - name: Button
     clip: {fileID: 8300000, guid: aa084f07de9f6d4489f3b914a86fe587, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    type: 0
     source: {fileID: 0}
   - name: Player Death
     clip: {fileID: 8300000, guid: 0faaccd0f4dcd6d4fbc04069bca08099, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    type: 0
     source: {fileID: 0}

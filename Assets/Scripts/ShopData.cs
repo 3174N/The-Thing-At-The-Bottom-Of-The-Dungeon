@@ -5,6 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class ShopData
 {
+    public bool sfx;
+    public bool music;
+
     public int gems;
 
     public int speedUses;
@@ -19,6 +22,9 @@ public class ShopData
 
     public ShopData(GameManager manager)
     {
+        sfx = manager.sfxOn;
+        music = manager.musicOn;
+
         gems = manager.gems;
 
         speedUses = manager.speedUses;

@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [Header("SETTINGS")]
+    public bool musicOn;
+    public bool sfxOn;
+
     [Header("SHOP")]
     public int gems;
 
@@ -55,6 +59,9 @@ public class GameManager : MonoBehaviour
     public void LoadShop()
     {
         ShopData data = SaveSystem.LoadShop();
+
+        sfxOn = data.sfx;
+        musicOn = data.music;
 
         gems = data.gems;
 
