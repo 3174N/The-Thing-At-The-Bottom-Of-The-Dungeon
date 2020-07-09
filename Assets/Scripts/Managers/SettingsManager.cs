@@ -15,6 +15,8 @@ public class SettingsManager : MonoBehaviour
     public Sprite musicOn;
     public Sprite musicOff;
 
+    public GameObject codeInput;
+
     public void SFX()
     {
         if (sfxState)
@@ -49,5 +51,15 @@ public class SettingsManager : MonoBehaviour
         }
 
         FindObjectOfType<GameManager>().musicOn = musicState;
+    }
+
+    public void SubmitCode()
+    {
+        codeInput.SetActive(true);
+    }
+
+    public void CancelCode()
+    {
+        codeInput.SetActive(false);
     }
 }

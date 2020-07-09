@@ -8,6 +8,8 @@ public class ShopData
     public bool sfx;
     public bool music;
 
+    public Code[] codes;
+
     public int gems;
 
     public int speedUses;
@@ -24,6 +26,8 @@ public class ShopData
     {
         sfx = manager.sfxOn;
         music = manager.musicOn;
+
+        codes = manager.codes;
 
         gems = manager.gems;
 

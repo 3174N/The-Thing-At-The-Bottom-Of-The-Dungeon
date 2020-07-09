@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
     [Header("SETTINGS")]
     public bool musicOn;
     public bool sfxOn;
+
+    public Code[] codes;
 
     [Header("SHOP")]
     public int gems;
@@ -48,7 +51,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //LoadShop();
+        LoadShop();
     }
 
     public void SaveShop()
@@ -63,6 +66,8 @@ public class GameManager : MonoBehaviour
         sfxOn = data.sfx;
         musicOn = data.music;
 
+        codes = data.codes;
+
         gems = data.gems;
 
         speedUses = data.speedUses;
@@ -74,5 +79,17 @@ public class GameManager : MonoBehaviour
         damagePrice = data.damagePrice;
         healthPrice = data.healthPrice;
         coinsPrice = data.coinsPrice;
+    }
+
+    public void Submit(string input)
+    {
+        Code code = Array.Find(codes, c => c.code == input.ToLower());
+        if (code == null)
+        {
+            return;
+        }
+
+        code.isUsed = true;
+        FindObjectOfType<GameManager>().gems += code.amount;
     }
 }
