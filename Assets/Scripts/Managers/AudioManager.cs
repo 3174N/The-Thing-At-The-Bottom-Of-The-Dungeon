@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using UnityEngine.Audio;
+using System.Runtime.InteropServices;
 
 public class AudioManager : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class AudioManager : MonoBehaviour
 
         if (s.type == Sound.SoundType.SFX && FindObjectOfType<GameManager>().sfxOn)
             s.source.Play();
-        if (s.type == Sound.SoundType.Music && FindObjectOfType<GameManager>().musicOn)
+        else
             s.source.Play();
     }
 

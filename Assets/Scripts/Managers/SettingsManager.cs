@@ -37,11 +37,15 @@ public class SettingsManager : MonoBehaviour
         {
             musicState = false;
             music.sprite = musicOff;
+
+            FindObjectOfType<AudioManager>().Stop("Theme");
         }
         else
         {
             musicState = true;
             music.sprite = musicOn;
+
+            FindObjectOfType<AudioManager>().Play("Theme");
         }
 
         FindObjectOfType<GameManager>().musicOn = musicState;
