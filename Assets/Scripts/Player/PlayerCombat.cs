@@ -30,7 +30,7 @@ public class PlayerCombat : MonoBehaviour
     playerMovement player;
     float playerSpeed;
 
-    Animator animator;
+    public Animator animator;
     SpriteRenderer spriteRenderer;
     GameManager gameManager;
     #endregion
@@ -38,7 +38,6 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponentInParent<Animator>();
 
         player = GetComponentInParent<playerMovement>();
 
