@@ -8,7 +8,7 @@ public class EnemyCombat : MonoBehaviour
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
-    public Animator animator;
+    Animator animator;
 
     SpriteRenderer spriteRenderer;
 
@@ -17,6 +17,7 @@ public class EnemyCombat : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
         waitTime = currentWeapon.delay;
     }
@@ -24,6 +25,7 @@ public class EnemyCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (waitTime <= 0)
         {
             animator.SetTrigger("Attack");

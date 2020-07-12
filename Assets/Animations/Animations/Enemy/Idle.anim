@@ -6,7 +6,11 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Animations/Animations/Enemy/Attack_Right.anim
   m_Name: Attack_Right
+=======
+  m_Name: Idle
+>>>>>>> parent of 90f9cd2... Added attack and run animations:Assets/Animations/Animations/Enemy/Idle.anim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
