@@ -53,8 +53,8 @@ public class EnemyMovement : MonoBehaviour
             }
 
             animator.SetFloat("Look X", lookDirection.x);
-            animator.SetFloat("Look Y", lookDirection.y);
-            animator.SetFloat("Speed", movement.magnitude);
+            if (room.hasEntered)
+                animator.SetFloat("Speed", movement.magnitude);
         }
     }
 
