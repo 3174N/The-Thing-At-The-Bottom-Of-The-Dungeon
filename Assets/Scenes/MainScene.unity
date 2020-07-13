@@ -605,6 +605,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3670176409374001245}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &134424101 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6697360803918109990, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3670176409374001245}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &135938430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8264,6 +8270,10 @@ PrefabInstance:
       propertyPath: noRevDeathMenu
       value: 
       objectReference: {fileID: 820657373}
+    - target: {fileID: 61014451, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 134424101}
     - target: {fileID: 355531381, guid: 5bbd7d607e94b3b49a7baf7aa64a9cc7, type: 3}
       propertyPath: m_Size.x
       value: 2.1333334

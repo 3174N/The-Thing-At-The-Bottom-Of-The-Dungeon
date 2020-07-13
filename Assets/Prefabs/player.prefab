@@ -248,9 +248,9 @@ GameObject:
   - component: {fileID: 7880444841074367651}
   - component: {fileID: 3670176408487911944}
   - component: {fileID: 3670176408487911945}
-  - component: {fileID: 1439865449}
   - component: {fileID: 355531381}
   - component: {fileID: 8278663896456636532}
+  - component: {fileID: 6697360803918109990}
   m_Layer: 8
   m_Name: player
   m_TagString: Player
@@ -377,25 +377,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &1439865449
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3670176408487911950}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: eb43b4b5d66c32b4293fdc1e517d30ac, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &355531381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -542,6 +523,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &6697360803918109990
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670176408487911950}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c35d781d08ead1242ae5fb672c2ea4cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3670176408727921176
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +988,7 @@ MonoBehaviour:
   joystick: {fileID: 0}
   damageBonus: 0
   damageText: {fileID: 0}
-  animator: {fileID: 1439865449}
+  animator: {fileID: 0}
 --- !u!1 &8700594859644244789
 GameObject:
   m_ObjectHideFlags: 0
