@@ -62,6 +62,7 @@ public class playerMovement : MonoBehaviour
 
         animator.SetFloat("Look X", lookDirection.x);
         animator.SetFloat("Speed", movement.magnitude);
+        Debug.Log(movement.magnitude);
     }
 
     /// <summary>
