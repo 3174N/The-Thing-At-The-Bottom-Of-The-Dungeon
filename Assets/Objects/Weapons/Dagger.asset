@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dagger
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 00271b8668aa965408ded0e12f037a00, type: 3}
-  damage: 7
+  damage: 5
   range: 1.5
   delay: 1
   weaponObject: {fileID: 8074224583440884664, guid: c3b55817256465a4a926c3c84255f985,
