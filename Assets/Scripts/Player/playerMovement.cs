@@ -60,9 +60,9 @@ public class playerMovement : MonoBehaviour
             isPlaying = false;
         }
 
-        animator.SetFloat("Look X", lookDirection.x);
+        animator.SetFloat("Look X", Mathf.RoundToInt(lookDirection.x));
         animator.SetFloat("Speed", movement.magnitude);
-        Debug.Log(movement.magnitude);
+        Debug.Log("Player: " + Mathf.RoundToInt(lookDirection.x));
     }
 
     /// <summary>
