@@ -8,7 +8,7 @@ public class EnemyCombat : MonoBehaviour
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
-    Animator animator;
+    public Animator animator;
 
     SpriteRenderer spriteRenderer;
 
@@ -17,7 +17,6 @@ public class EnemyCombat : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
 
         waitTime = currentWeapon.delay;
     }

@@ -40,7 +40,7 @@ public class EnemyMovement : MonoBehaviour
                 lookDirection.Set(movement.x, movement.y);
                 lookDirection.Normalize();
 
-                if (!isPlaying && room.hasEntered)
+                if (!isPlaying && room.hasEntered && FindObjectOfType<GameManager>().sfxOn)
                 {
                     source.Play();
                     isPlaying = true;

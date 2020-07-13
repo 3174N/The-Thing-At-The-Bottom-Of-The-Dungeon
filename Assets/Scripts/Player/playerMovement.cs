@@ -48,7 +48,7 @@ public class playerMovement : MonoBehaviour
             lookDirection.Set(movement.x, movement.y);
             lookDirection.Normalize();
 
-            if (!isPlaying)
+            if (!isPlaying && FindObjectOfType<GameManager>().sfxOn)
             {
                 isPlaying = true;
                 audioSource.Play();
