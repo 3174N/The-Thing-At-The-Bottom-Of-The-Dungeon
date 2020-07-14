@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     [Header("STARTING BONUSES")]
     public int startingCoins;
-    public int startingSpeed;
+    public float startingSpeed;
     public int maxHealth = 300;
     public int startingDamage;
 

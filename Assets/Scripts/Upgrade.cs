@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Upgrade : MonoBehaviour
 {
     public bool speed, health, damage, coins;
-    public int amount;
+    public float amount;
 
     public int price;
 
@@ -66,7 +66,7 @@ public class Upgrade : MonoBehaviour
                 return;
             }
 
-            Finder.GetGameManager().startingCoins += amount;
+            Finder.GetGameManager().startingCoins += (int)amount;
 
             Finder.GetGameManager().coinsUses += 1;
             usesText.text = Finder.GetGameManager().coinsUses + " / " + uses;
@@ -92,7 +92,7 @@ public class Upgrade : MonoBehaviour
                 return;
             }
 
-            Finder.GetGameManager().maxHealth += amount;
+            Finder.GetGameManager().maxHealth += (int)amount;
 
             Finder.GetGameManager().healthUses += 1;
             usesText.text = Finder.GetGameManager().healthUses + " / " + uses;
@@ -105,7 +105,7 @@ public class Upgrade : MonoBehaviour
                 return;
             }
 
-            Finder.GetGameManager().startingDamage += amount;
+            Finder.GetGameManager().startingDamage += (int)amount;
 
             Finder.GetGameManager().damageUses += 1;
             usesText.text = Finder.GetGameManager().damageUses + " / " + uses;
