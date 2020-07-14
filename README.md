@@ -21,7 +21,7 @@ Latest release: https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/
   - [ ] More bosses
 - [ ] Enemies
   - [x] Basic enemies
-  - [ ] Animate enemies
+  - [x] Animate enemies
   - [ ] More enemies
 - [ ] Graphics
   - [x] Basic graphics
@@ -30,8 +30,9 @@ Latest release: https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/
   - [ ] Better graphics
 - [ ] More floors
 - [ ] Sound
-  - [ ] SFX
-  - [ ] Soundtrack
+  - [x] SFX
+  - [x] Soundtrack
+  - [ ] Better soundtrack
 - [x] Out of game shop
 - [x] Visual effects
   - [x] Particals
