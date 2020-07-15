@@ -17102,6 +17102,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3773540085480322202}
     m_Modifications:
+    - target: {fileID: 1727418136669003383, guid: d356286a6c52cf7468628cdc035f1b16,
+        type: 3}
+      propertyPath: m_UseOneWay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1727418136721114185, guid: d356286a6c52cf7468628cdc035f1b16,
         type: 3}
       propertyPath: m_Name
@@ -17115,7 +17120,7 @@ PrefabInstance:
     - target: {fileID: 1727418136721114186, guid: d356286a6c52cf7468628cdc035f1b16,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1727418136721114186, guid: d356286a6c52cf7468628cdc035f1b16,
         type: 3}
