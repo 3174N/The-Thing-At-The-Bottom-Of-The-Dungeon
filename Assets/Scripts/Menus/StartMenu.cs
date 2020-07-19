@@ -20,7 +20,10 @@ public class StartMenu : MonoBehaviour
     public void Launch()
     {
         if (!FindObjectOfType<GameManager>().hasTutorial)
+        {
+            FindObjectOfType<GameManager>().hasTutorial = true;
             levelLoader.LoadTutorial();
+        }
         else
             levelLoader.LoadStart();
 
