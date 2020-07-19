@@ -21822,7 +21822,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 132614001524811725}
-  - component: {fileID: 1837912271993640387}
   - component: {fileID: 2695569558336804722}
   - component: {fileID: 8061124969921603910}
   - component: {fileID: 2821934332327640436}
@@ -25077,18 +25076,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1837912271993640387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385745296717937698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2406fa542b5bd724bb547af0e091c73f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1838078551728465723
 GameObject:
   m_ObjectHideFlags: 0
@@ -51791,6 +51778,120 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &4871064209621579824
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830720, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830721, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: texts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830721, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: texts.Array.data[0].duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830721, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: texts.Array.data[1].duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830721, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: texts.Array.data[0].text
+      value: Welcome to the dungeon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830721, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: texts.Array.data[1].text
+      value: Try moving by moving the left joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830721, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: texts.Array.data[1].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830721, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: texts.Array.data[1].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830721, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: texts.Array.data[1].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830721, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: texts.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871064209590830751, guid: a306e2fbafabd9646ab3a02c8b480dd3,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial Item
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a306e2fbafabd9646ab3a02c8b480dd3, type: 3}
 --- !u!4 &4878358245638873607
 Transform:
   m_ObjectHideFlags: 0
