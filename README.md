@@ -38,3 +38,6 @@ Latest release: https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/
   - [x] Particals
   - [x] Post-processing
 - [x] Save system
+
+## Help beta testing
+[Join the beta-testing discord server](https://discord.gg/DQMm5F)
