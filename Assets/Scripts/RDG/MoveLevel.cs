@@ -8,6 +8,8 @@ public class MoveLevel : MonoBehaviour
     #region variables
     public GameObject moveButton;
 
+    public bool tutorial;
+
     LevelLoader levelLoader;
     #endregion
 
@@ -32,6 +34,9 @@ public class MoveLevel : MonoBehaviour
 
     public void Move()
     {
-        levelLoader.LoadNextLevel();
+        if (tutorial)
+            levelLoader.LoadStart();
+        else
+            levelLoader.LoadNextLevel();
     }
 }

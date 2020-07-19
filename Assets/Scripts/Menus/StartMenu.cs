@@ -19,7 +19,10 @@ public class StartMenu : MonoBehaviour
 
     public void Launch()
     {
-        levelLoader.LoadStart();
+        if (!FindObjectOfType<GameManager>().hasTutorial)
+            levelLoader.LoadTutorial();
+        else
+            levelLoader.LoadStart();
 
         GameObject.FindObjectOfType<GameManager>().SaveShop();
     }

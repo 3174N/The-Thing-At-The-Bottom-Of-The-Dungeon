@@ -15,9 +15,36 @@ public class LevelLoader : MonoBehaviour
     public Text progressText;
     #endregion
 
+    private static string NameFromIndex(int BuildIndex)
+    {
+        string path = SceneUtility.GetScenePathByBuildIndex(BuildIndex);
+        int slash = path.LastIndexOf('/');
+        string name = path.Substring(slash + 1);
+        int dot = name.LastIndexOf('.');
+        return name.Substring(0, dot);
+    }
+
+    private int SceneIndexFromName(string sceneName)
+    {
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            string testedScreen = NameFromIndex(i);
+            //print("sceneIndexFromName: i: " + i + " sceneName = " + testedScreen);
+            if (testedScreen == sceneName)
+                return i;
+        }
+        return -1;
+    }
+
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    public void LoadTutorial()
+    {
+        Debug.Log(SceneIndexFromName("Tutorial"));
+        StartCoroutine(LoadLevel(SceneIndexFromName("Tutorial")));
     }
 
     public void LoadStart()

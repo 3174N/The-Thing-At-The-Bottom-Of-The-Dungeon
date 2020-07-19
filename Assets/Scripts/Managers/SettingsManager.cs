@@ -62,4 +62,9 @@ public class SettingsManager : MonoBehaviour
     {
         codeInput.SetActive(false);
     }
+
+    public void Tutorial()
+    {
+        FindObjectOfType<LevelLoader>().LoadTutorial();
+    }
 }

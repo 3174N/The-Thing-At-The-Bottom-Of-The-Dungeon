@@ -5,6 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class ShopData
 {
+    public bool hasTutorial;
+
     public bool sfx;
     public bool music;
 
@@ -24,6 +26,8 @@ public class ShopData
 
     public ShopData(GameManager manager)
     {
+        hasTutorial = manager.hasTutorial;
+
         sfx = manager.sfxOn;
         music = manager.musicOn;
 

@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [Header("TUTORIAL")]
+    public bool hasTutorial;
+
     [Header("SETTINGS")]
     public bool musicOn;
     public bool sfxOn;
@@ -62,6 +65,8 @@ public class GameManager : MonoBehaviour
     public void LoadShop()
     {
         ShopData data = SaveSystem.LoadShop();
+
+        hasTutorial = data.hasTutorial;
 
         sfxOn = data.sfx;
         musicOn = data.music;
