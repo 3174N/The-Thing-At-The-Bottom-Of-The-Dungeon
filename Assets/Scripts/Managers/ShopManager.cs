@@ -7,6 +7,8 @@ public class ShopManager : MonoBehaviour
 {
     public Text gems;
 
+    public GameObject morePanel;
+
     // Update is called once per frame
     void Update()
     {
@@ -25,5 +27,15 @@ public class ShopManager : MonoBehaviour
             
             FindObjectOfType<AudioManager>().Play("Button");
         }
+    }
+
+    public void Move()
+    {
+        morePanel.SetActive(true);
+    }
+
+    public void Back()
+    {
+        morePanel.SetActive(false);
     }
 }
