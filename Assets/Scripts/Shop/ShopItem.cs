@@ -45,6 +45,27 @@ public class ShopItem : MonoBehaviour
         priceText.text = price.ToString();
     }
 
+    public void Refresh()
+    {
+        gameObject.SetActive(true);
+
+        if (sellWeapon)
+        {
+            weapon = weapons[(int)Random.Range(0f, weapons.Length)];
+            price = (int)Random.Range(weapon.minPrice, weapon.maxPrice);
+            image.sprite = weapon.sprite;
+        }
+        else
+        {
+            powerUp = powerUps[(int)Random.Range(0f, powerUps.Length)];
+            powerUp.GetComponent<PowerUp>().Randomize();
+            price = (int)Random.Range(0f, 20f);
+            image.sprite = powerUp.GetComponent<SpriteRenderer>().sprite;
+        }
+
+        priceText.text = price.ToString();
+    }
+
     public void Buy()
     {
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -60,7 +81,7 @@ public class ShopItem : MonoBehaviour
                 powerUp.GetComponent<PowerUp>().Apply(player.GetComponent<playerMovement>());
             }
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else
         {
