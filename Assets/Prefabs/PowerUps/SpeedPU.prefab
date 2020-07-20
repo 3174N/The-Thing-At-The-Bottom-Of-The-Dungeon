@@ -121,10 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcb54681c5e02548b7f49a56d128e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 0.5
-  speed: 1
-  damage: 0
-  health: 0
+  type: 0
+  amount: 3
+  minPrice: 10
+  maxPrice: 15
   healthPop: {fileID: 3534433943728248566, guid: 7576b94544fd72c4eb051d560b65957f,
     type: 3}
   damagePop: {fileID: 4299866077889953601, guid: 0b666d0c0eb0cc948a01c6b0b32914e2,

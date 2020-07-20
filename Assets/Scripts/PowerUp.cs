@@ -5,9 +5,16 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     #region variables 
+    public enum Type
+    {
+        Speed,
+        Damage,
+        Health
+    }
+    public Type type;
     public float amount;
-
-    public bool speed, damage, health;
+    public float minPrice;
+    public float maxPrice;
 
     public GameObject healthPop, damagePop, speedPop;
     #endregion
@@ -39,19 +46,19 @@ public class PowerUp : MonoBehaviour
 
     public void Apply(playerMovement player)
     {
-        if (speed)
+        if (type == Type.Speed)
         {
             player.ChangeSpeed(amount);
             GameObject pop = Instantiate(speedPop);
             Destroy(pop.gameObject, 1f);
         }
-        else if (damage)
+        else if (type == Type.Damage)
         {
             player.gameObject.GetComponentInChildren<PlayerCombat>().ChangeDamage(amount);
             GameObject pop = Instantiate(damagePop);
             Destroy(pop.gameObject, 1f);
         }
-        else if (health)
+        else if (type == Type.Health)
         {
             player.gameObject.GetComponent<Combat>().ChangeHealth(amount);
             GameObject pop = Instantiate(healthPop);
@@ -64,17 +71,17 @@ public class PowerUp : MonoBehaviour
         int rand = Random.Range(1, 3);
         if (rand == 1)
         {
-            damage = true;
+            type = Type.Damage;
             amount = 7;
         }
         else if (rand == 2)
         {
-            speed = true;
+            type = Type.Speed;
             amount = 3;
         }
         else
         {
-            health = true;
+            type = Type.Health;
             amount = 20;
         }
     }

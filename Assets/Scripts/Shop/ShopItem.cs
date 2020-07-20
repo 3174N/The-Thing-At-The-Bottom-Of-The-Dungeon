@@ -7,9 +7,14 @@ using UnityEngine.UI;
 public class ShopItem : MonoBehaviour
 {
     #region variables
-    public bool sellWeapon;
+    public enum Sell
+    {
+        Weapons,
+        Powerups
+    }
+
+    public Sell sell;
     public Weapon[] weapons;
-    public bool sellPowerUp;
     public GameObject[] powerUps;
 
     public Text priceText;
@@ -28,7 +33,7 @@ public class ShopItem : MonoBehaviour
     {
         image = GetComponent<Image>();
 
-        if (sellWeapon)
+        if (sell == Sell.Weapons)
         {
             weapon = weapons[(int)Random.Range(0f, weapons.Length)];
             price = (int)Random.Range(weapon.minPrice, weapon.maxPrice);
@@ -37,8 +42,7 @@ public class ShopItem : MonoBehaviour
         else
         {
             powerUp = powerUps[(int)Random.Range(0f, powerUps.Length)];
-            powerUp.GetComponent<PowerUp>().Randomize();
-            price = (int)Random.Range(0f, 20f);
+            price = (int)Random.Range(powerUp.GetComponent<PowerUp>().minPrice, powerUp.GetComponent<PowerUp>().maxPrice);
             image.sprite = powerUp.GetComponent<SpriteRenderer>().sprite;
         }
            
@@ -49,7 +53,7 @@ public class ShopItem : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        if (sellWeapon)
+        if (sell == Sell.Weapons)
         {
             weapon = weapons[(int)Random.Range(0f, weapons.Length)];
             price = (int)Random.Range(weapon.minPrice, weapon.maxPrice);
@@ -58,8 +62,7 @@ public class ShopItem : MonoBehaviour
         else
         {
             powerUp = powerUps[(int)Random.Range(0f, powerUps.Length)];
-            powerUp.GetComponent<PowerUp>().Randomize();
-            price = (int)Random.Range(0f, 20f);
+            price = (int)Random.Range(powerUp.GetComponent<PowerUp>().minPrice, powerUp.GetComponent<PowerUp>().maxPrice);
             image.sprite = powerUp.GetComponent<SpriteRenderer>().sprite;
         }
 
@@ -74,7 +77,7 @@ public class ShopItem : MonoBehaviour
         {
             player.ChangeCoins(-price);
 
-            if (sellWeapon)
+            if (sell == Sell.Weapons)
                 player.gameObject.GetComponentInChildren<PlayerCombat>().ChangeWeapon(weapon);
             else
             {
