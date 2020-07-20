@@ -10,7 +10,6 @@ public class Shop : MonoBehaviour
 
     public GameObject openButton;
 
-    public StatsDisplay inventory;
     public Text coinText;
     
     [SerializeField]
