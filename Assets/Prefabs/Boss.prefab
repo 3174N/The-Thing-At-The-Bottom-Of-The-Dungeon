@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6c7baa424bc3a4fb2e323cee1b45d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: {fileID: 0}
+  key: {fileID: 7605563399200776438, guid: 67cbb074162184b439e6419a25072e7b, type: 3}
   healthBar: {fileID: 6876258053170647802}
   maxWaitTime: 5
   timeToReach: 0
@@ -155,7 +155,8 @@ MonoBehaviour:
   DropOnDeath:
   - {fileID: 7605563399200776438, guid: 67cbb074162184b439e6419a25072e7b, type: 3}
   cameraDrop: {fileID: 0}
-  attackParticals: {fileID: 0}
+  attackParticals: {fileID: 5886605432485418561, guid: e563ab876844b42499d64a02e6aad830,
+    type: 3}
   healthText: {fileID: 0}
 --- !u!61 &8857514136301672032
 BoxCollider2D:
