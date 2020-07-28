@@ -1,6 +1,5 @@
 # Project Dungeon Dweller
 A rogue-like dungeon crawler for android.
-![](Assets/Sprites/2020-04-23_20.15.04.png=200x200)
 
 Start of project:
 10/2/2020
