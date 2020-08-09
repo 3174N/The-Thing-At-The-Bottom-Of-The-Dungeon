@@ -3041,6 +3041,9 @@ MonoBehaviour:
   musicOn: {fileID: 21300000, guid: 37b2f92bd141e0047906f7feec991f97, type: 3}
   musicOff: {fileID: 21300000, guid: b02bc948dd4a5cd439bda4925547ab85, type: 3}
   codeInput: {fileID: 1526731896}
+  buttons:
+  - {fileID: 480756103}
+  - {fileID: 59728425}
 --- !u!1 &389628904
 GameObject:
   m_ObjectHideFlags: 0

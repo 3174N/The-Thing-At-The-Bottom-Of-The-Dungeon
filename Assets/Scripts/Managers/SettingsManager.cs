@@ -16,6 +16,7 @@ public class SettingsManager : MonoBehaviour
     public Sprite musicOff;
 
     public GameObject codeInput;
+    public GameObject[] buttons;
 
     public void SFX()
     {
@@ -56,11 +57,19 @@ public class SettingsManager : MonoBehaviour
     public void SubmitCode()
     {
         codeInput.SetActive(true);
+        foreach (GameObject button in buttons)
+        {
+            button.SetActive(false);
+        }
     }
 
     public void CancelCode()
     {
         codeInput.SetActive(false);
+        foreach (GameObject button in buttons)
+        {
+            button.SetActive(true);
+        }
     }
 
     public void Tutorial()
