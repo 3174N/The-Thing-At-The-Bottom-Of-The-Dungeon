@@ -19,7 +19,9 @@ public class ShopManager : MonoBehaviour
     {
         if (Ads.RewardAd())
         {
-            Finder.GetGameManager().gems += amount;
+            FindObjectOfType<GameManager>().gems += amount;
+            FindObjectOfType<GameManager>().SaveShop();
+
         }
         else
         {
