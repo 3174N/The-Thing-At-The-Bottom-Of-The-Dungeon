@@ -52,7 +52,10 @@ public class EnemyMovement : MonoBehaviour
                 isPlaying = false;
             }
 
-            animator.SetFloat("Look X", lookDirection.x);
+            if (lookDirection.x > 0)
+                animator.SetFloat("Look X", 1);
+            else
+                animator.SetFloat("Look X", -1);
             animator.SetFloat("Speed", movement.magnitude);
         }
     }
