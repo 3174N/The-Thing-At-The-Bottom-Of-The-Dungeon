@@ -18,6 +18,19 @@ public class SettingsManager : MonoBehaviour
     public GameObject codeInput;
     public GameObject[] buttons;
 
+    private void Start()
+    {
+        if (FindObjectOfType<GameManager>().sfxOn)
+            sfx.sprite = sfxOn;
+        else
+            sfx.sprite = sfxOff;
+
+        if (FindObjectOfType<GameManager>().musicOn)
+            music.sprite = musicOn;
+        else
+            music.sprite = musicOff;
+    }
+
     public void SFX()
     {
         if (sfxState)
@@ -32,6 +45,7 @@ public class SettingsManager : MonoBehaviour
         }
 
         FindObjectOfType<GameManager>().sfxOn = sfxState;
+        FindObjectOfType<GameManager>().SaveShop();
     }
 
     public void Music()
@@ -52,6 +66,7 @@ public class SettingsManager : MonoBehaviour
         }
 
         FindObjectOfType<GameManager>().musicOn = musicState;
+        FindObjectOfType<GameManager>().SaveShop();
     }
 
     public void SubmitCode()
