@@ -7,7 +7,7 @@ Start of project:
 [Latest release](https://github.com/3174N/The-Thing-At-The-Bottom-Of-The-Dungeon/releases)
 
 ## Contributing
-See [docs/Contributing.md](Contributing.md)
+See [Contributing.md](docs/Contributing.md)
 
 ## TODO / Roadmap:
 [Trello list](https://trello.com/b/kU29twMe/dungeon-game)
