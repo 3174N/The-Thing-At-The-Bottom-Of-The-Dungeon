@@ -28,9 +28,6 @@ At this point, you're ready to make your changes! Feel free to ask for help; eve
 
 
 # How to report a bug
-If you find a serious exploit or security vulnerability, do NOT open an issue. Email `security@sfr.anonaddy.com` instead.
-*I know this sounds unlikely when talking about offline file sorting software, but still.*
-
 Before reporting a bug, use GitHub's search tool to see if you're alone. You probably aren't.
 
 When filing a bug report, please fill out the issue template provided. In short, it should look something like this:
